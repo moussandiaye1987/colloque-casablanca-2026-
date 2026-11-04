@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Colloque Casablanca 2026</title>
 <meta name="description" content="Colloque international « Le Soufisme, la Paix et le Dialogue des Civilisations » — Jamhiyatou Ansaarud-Dîn, Groupement Maroc. Du 6 au 8 novembre 2026 à Sidi Maarouf, Casablanca.">
-<meta name="theme-color" content="#0E2A20">
+<meta name="theme-color" content="#1F4741">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://colloque.ansaar-ma.com/">
 <meta property="og:title" content="Le Soufisme, la Paix et le Dialogue des Civilisations · Casablanca, 6–8 nov. 2026">
@@ -17,32 +17,35 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Marcellus&family=Noto+Sans+Arabic:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap">
 <style>
 /* Layout : héros photo plein cadre (crépuscule sur Casablanca) → bandes alternées ivoire / vert profond,
    motif khatam (étoile à huit branches du zellige) en filigrane, programme en onglets par jour. */
 :root{
-  --ink:#0E2A20;          /* vert nuit, texte & bandes sombres */
-  --green:#1C5A3C;        /* vert profond du logo */
-  --leaf:#3F9A52;         /* vert clair du logo */
-  --gold:#A87A2C;         /* laiton / or */
-  --gold-soft:#E9D6A8;
-  --bg:#FBF9F3;           /* ivoire */
-  --sand:#F2EBDA;         /* sable */
-  --surface:#FFFFFF;
-  --fg:#17261F;
-  --muted:#5C6B62;
-  --line:#E2D8C2;
-  --on-dark:#F6F0E1;
-  --on-dark-muted:#C9C2AE;
-  --dark-band:#0E2A20;
-  --dark-band-2:#143A2B;
-  --live:#C2372B;
+  --ink:#1F4741;
+  --green:#1F4741;
+  --leaf:#568176;
+  --gold:#B07F2E;
+  --gold-text:#78531E;
+  --gold-soft:#E9D8B5;
+  --gold-contrast:#E4C47F;
+  --bg:#F7F2E4;
+  --sand:#EFE8D8;
+  --surface:#FFFCF5;
+  --fg:#222C28;
+  --muted:#59645E;
+  --line:#E8E1D2;
+  --on-dark:#F7F2E4;
+  --on-dark-muted:#D3DED7;
+  --dark-band:#1F4741;
+  --dark-band-2:#285850;
+  --live:#A94335;
 
-  --f-display:"Marcellus", "Cormorant Garamond", Georgia, serif;
-  --f-body:"Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
-  --f-ar-display:"Amiri", "Traditional Arabic", serif;
-  --f-ar-body:"Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  --f-display:"Bricolage Grotesque", "Inter", sans-serif;
+  --f-body:"Inter", "Segoe UI", system-ui, sans-serif;
+  --f-quote:"Lora", Georgia, serif;
+  --f-ar-display:"Noto Kufi Arabic", "Cairo", sans-serif;
+  --f-ar-body:"Cairo", "Segoe UI", Tahoma, sans-serif;
 
   --step--1:clamp(.82rem,.8rem + .1vw,.88rem);
   --step-0:clamp(1rem,.97rem + .15vw,1.08rem);
@@ -54,13 +57,13 @@
   --header-h:64px;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#0B1813;--sand:#10221B;--surface:#132A21;--fg:#ECE6D6;--muted:#A8B3AA;--line:#264336;
-  --green:#5DB574;--leaf:#6CC283;--gold:#D9B36A;--gold-soft:#5A4A26;--ink:#ECE6D6;
-  --dark-band:#07120E;--dark-band-2:#0F2219;--live:#F0705F;color-scheme:dark}}
+  --bg:#142521;--sand:#192E29;--surface:#203731;--fg:#F0EEE5;--muted:#C0CCC5;--line:#354A42;
+  --green:#78A99C;--leaf:#91BBAE;--gold:#E0B96E;--gold-text:#E0B96E;--gold-soft:#59482A;--gold-contrast:#E8C984;--ink:#F0EEE5;
+  --on-dark:#F7F2E4;--on-dark-muted:#D3DED7;--dark-band:#12231F;--dark-band-2:#1B342E;--live:#FF8A76;color-scheme:dark}}
 :root[data-theme="dark"]{
-  --bg:#0B1813;--sand:#10221B;--surface:#132A21;--fg:#ECE6D6;--muted:#A8B3AA;--line:#264336;
-  --green:#5DB574;--leaf:#6CC283;--gold:#D9B36A;--gold-soft:#5A4A26;--ink:#ECE6D6;
-  --dark-band:#07120E;--dark-band-2:#0F2219;--live:#F0705F;color-scheme:dark}
+  --bg:#142521;--sand:#192E29;--surface:#203731;--fg:#F0EEE5;--muted:#C0CCC5;--line:#354A42;
+  --green:#78A99C;--leaf:#91BBAE;--gold:#E0B96E;--gold-text:#E0B96E;--gold-soft:#59482A;--gold-contrast:#E8C984;--ink:#F0EEE5;
+  --on-dark:#F7F2E4;--on-dark-muted:#D3DED7;--dark-band:#12231F;--dark-band-2:#1B342E;--live:#FF8A76;color-scheme:dark}
 
 *,*::before,*::after{box-sizing:border-box}
 body{margin:0}
@@ -69,15 +72,15 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + env(safe-a
 body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:var(--step-0);line-height:1.6;-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--dark-band)}
 [dir="rtl"] body{font-family:var(--f-ar-body);line-height:1.8}
-h1,h2,h3,h4{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
-[dir="rtl"] :is(h1,h2,h3,h4){font-family:var(--f-ar-display);font-weight:700;line-height:1.35}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.1;text-wrap:balance;margin:0}
+[dir="rtl"] :is(h1,h2,h3,h4){font-family:var(--f-ar-display);font-weight:600;line-height:1.45}
 p{margin:0}
 a{color:inherit}
 img{max-width:100%;height:auto;display:block}
 :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:4px}
 .wrap{max-width:1180px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .section{padding-block:clamp(56px,8vw,104px)}
-.eyebrow{font-size:var(--step--1);letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold);display:flex;align-items:center;gap:10px}
+.eyebrow{font-size:var(--step--1);letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--gold-text);display:flex;align-items:center;gap:10px}
 [dir="rtl"] .eyebrow{letter-spacing:0;font-size:var(--step-0)}
 .eyebrow::before{content:"";width:22px;height:22px;flex:none;background:currentColor;
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 1l3.2 4.4 5.3-.6-.6 5.3L24 12l-4.1 1.9.6 5.3-5.3-.6L12 23l-3.2-4.4-5.3.6.6-5.3L0 12l4.1-1.9-.6-5.3 5.3.6z'/%3E%3C/svg%3E") center/contain no-repeat;
@@ -88,13 +91,13 @@ img{max-width:100%;height:auto;display:block}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:13px 22px;border-radius:999px;font-weight:600;font-size:var(--step--1);letter-spacing:.02em;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .2s,background .2s,border-color .2s;font-family:inherit}
 .btn:hover{transform:translateY(-1px)}
 .btn svg{width:18px;height:18px;flex:none}
-.btn-gold{background:#C99A45;color:#13231B}
-.btn-gold:hover{background:#D9AD5A}
-.btn-ghost{border-color:rgba(246,240,225,.45);color:#F6F0E1;background:rgba(14,42,32,.25);backdrop-filter:blur(6px)}
-.btn-ghost:hover{border-color:#F6F0E1}
-.btn-green{background:var(--green);color:#fff}
-[data-theme="dark"] .btn-green{color:#07120E}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-green{color:#07120E}}
+.btn-gold{background:var(--gold);color:#12231F}
+.btn-gold:hover{background:color-mix(in srgb,var(--gold) 86%,white)}
+.btn-ghost{border-color:rgba(247,242,228,.55);color:var(--on-dark);background:rgba(31,71,65,.4);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--on-dark)}
+.btn-green{background:var(--green);color:var(--on-dark)}
+[data-theme="dark"] .btn-green{color:#142521}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn-green{color:#142521}}
 .btn-line{border-color:var(--line);color:var(--fg);background:var(--surface)}
 .btn-line:hover{border-color:var(--gold)}
 
@@ -106,65 +109,65 @@ img{max-width:100%;height:auto;display:block}
 .dark-band .khatam::after,.dark-band.khatam::after{opacity:.12}
 
 /* ---------- En-tête ---------- */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(14,42,32,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#F6F0E1;border-bottom:1px solid rgba(201,154,69,.25)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(31,71,65,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--on-dark);border-bottom:1px solid rgba(228,196,127,.22)}
 .top .wrap{height:var(--header-h);display:flex;align-items:center;gap:16px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0;margin-inline-end:auto}
-.brand img{width:42px;height:42px;border-radius:50%;flex:none;box-shadow:0 0 0 2px rgba(201,154,69,.6)}
+.brand img{width:42px;height:42px;border-radius:50%;flex:none;box-shadow:0 0 0 2px rgba(176,127,46,.65)}
 .brand b{display:block;font-family:var(--f-display);font-weight:400;font-size:1.02rem;letter-spacing:.06em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.brand small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#C9C2AE;white-space:nowrap}
+.brand small{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#D3DED7;white-space:nowrap}
 [dir="rtl"] .brand small{letter-spacing:0;font-size:.8rem}
 .nav{display:flex;gap:4px}
-.nav a{padding:8px 12px;border-radius:999px;text-decoration:none;font-size:.9rem;color:#E7E0CD;transition:background .2s}
-.nav a:hover,.nav a.on{background:rgba(201,154,69,.18);color:#fff}
-.lang{display:flex;border:1px solid rgba(201,154,69,.45);border-radius:999px;padding:3px;flex:none}
-.lang button{all:unset;cursor:pointer;padding:5px 10px;border-radius:999px;font-size:.8rem;font-weight:600;color:#E7E0CD;line-height:1}
-.lang button[aria-pressed="true"]{background:#C99A45;color:#13231B}
-.lang button:focus-visible{outline:2px solid #C99A45}
-.menu-btn{display:none;all:unset;cursor:pointer;width:40px;height:40px;border-radius:50%;place-items:center;flex:none}
+.nav a{padding:8px 12px;border-radius:999px;text-decoration:none;font-size:.9rem;color:#E1E9E3;transition:background .2s}
+.nav a:hover,.nav a.on{background:rgba(228,196,127,.14);color:#fff}
+.lang{display:flex;border:1px solid rgba(228,196,127,.38);border-radius:999px;padding:3px;flex:none}
+.lang button{all:unset;cursor:pointer;padding:5px 10px;border-radius:999px;font-size:.8rem;font-weight:600;color:#E1E9E3;line-height:1}
+.lang button[aria-pressed="true"]{background:var(--gold-contrast);color:#1F4741}
+.lang button:focus-visible{outline:2px solid var(--gold-contrast)}
+.menu-btn{all:unset;display:none;cursor:pointer;width:40px;height:40px;border-radius:50%;place-items:center;flex:none}
 .menu-btn svg{width:22px;height:22px}
 @media (max-width:920px){
   .nav{display:none}
   .menu-btn{display:grid}
-  .nav.open{display:flex;flex-direction:column;position:absolute;inset:100% 0 auto;background:#0E2A20;padding:12px max(16px,env(safe-area-inset-right,0px)) 18px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid rgba(201,154,69,.3)}
+  .nav.open{display:flex;flex-direction:column;position:absolute;inset:100% 0 auto;background:var(--dark-band);padding:12px max(16px,env(safe-area-inset-right,0px)) 18px max(16px,env(safe-area-inset-left,0px));border-bottom:1px solid rgba(228,196,127,.24)}
   .nav.open a{padding:13px 14px;font-size:1.05rem}
 }
 @media (max-width:420px){.brand small{display:none}.brand b{font-size:.92rem}}
 
 /* ---------- Héros ---------- */
-.hero{position:relative;color:#F6F0E1;background:#0E2A20;overflow:hidden;isolation:isolate}
+.hero{position:relative;color:var(--on-dark);background:var(--dark-band);overflow:hidden;isolation:isolate}
 .hero-img{position:absolute;inset:0;z-index:-2}
 .hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 32%}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(90deg,rgba(9,28,21,.94) 0%,rgba(9,28,21,.78) 42%,rgba(9,28,21,.25) 75%,rgba(9,28,21,.1) 100%),
-             linear-gradient(0deg,rgba(9,28,21,.95) 0%,rgba(9,28,21,0) 38%)}
-[dir="rtl"] .hero::before{background:linear-gradient(270deg,rgba(9,28,21,.94) 0%,rgba(9,28,21,.78) 42%,rgba(9,28,21,.25) 75%,rgba(9,28,21,.1) 100%),linear-gradient(0deg,rgba(9,28,21,.95) 0%,rgba(9,28,21,0) 38%)}
-@media (max-width:760px){.hero::before,[dir="rtl"] .hero::before{background:linear-gradient(0deg,rgba(9,28,21,.97) 0%,rgba(9,28,21,.82) 55%,rgba(9,28,21,.45) 100%)}}
+  background:linear-gradient(90deg,rgba(15,44,40,.94) 0%,rgba(15,44,40,.78) 42%,rgba(15,44,40,.25) 75%,rgba(15,44,40,.1) 100%),
+             linear-gradient(0deg,rgba(15,44,40,.95) 0%,rgba(15,44,40,0) 38%)}
+[dir="rtl"] .hero::before{background:linear-gradient(270deg,rgba(15,44,40,.94) 0%,rgba(15,44,40,.78) 42%,rgba(15,44,40,.25) 75%,rgba(15,44,40,.1) 100%),linear-gradient(0deg,rgba(15,44,40,.95) 0%,rgba(15,44,40,0) 38%)}
+@media (max-width:760px){.hero::before,[dir="rtl"] .hero::before{background:linear-gradient(0deg,rgba(15,44,40,.97) 0%,rgba(15,44,40,.82) 55%,rgba(15,44,40,.45) 100%)}}
 .hero .wrap{padding-block:clamp(40px,7vw,96px) clamp(36px,5vw,64px);display:grid;gap:28px}
 .hero-inner{max-width:720px;display:grid;gap:20px}
-.basmala{font-family:var(--f-ar-display);font-size:clamp(1.3rem,1.1rem + .8vw,1.8rem);color:#E3C27E;line-height:1.6}
+.basmala{font-family:"Amiri",var(--f-ar-display);font-size:clamp(1.3rem,1.1rem + .8vw,1.8rem);color:var(--gold-contrast);line-height:1.6}
 .edition{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(227,194,126,.5);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#E9D6A8;font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(228,196,127,.4);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#F0DDAF;font-weight:600}
 [dir="rtl"] .pill{letter-spacing:0;font-size:.92rem}
-.hero h1{font-size:var(--step-4);letter-spacing:-.005em;color:#FFF9EC}
-.hero h1 em{font-style:normal;color:#E3C27E}
-.hero .lead{font-size:var(--step-1);color:#DDD5C1;max-width:58ch;line-height:1.5}
+.hero h1{font-size:var(--step-4);font-weight:700;letter-spacing:-.025em;color:#FFFCF5}
+.hero h1 em{font-style:normal;color:var(--gold-contrast)}
+.hero .lead{font-size:var(--step-1);color:#E1E9E3;max-width:58ch;line-height:1.5}
 .dates{display:flex;flex-wrap:wrap;align-items:stretch;gap:12px;margin-top:6px}
-.day-chip{display:grid;place-items:center;min-width:74px;padding:10px 12px;border:1px solid rgba(227,194,126,.45);border-radius:12px;background:rgba(9,28,21,.35);backdrop-filter:blur(4px)}
-.day-chip small{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#C9C2AE}
+.day-chip{display:grid;place-items:center;min-width:74px;padding:10px 12px;border:1px solid rgba(228,196,127,.34);border-radius:12px;background:rgba(15,44,40,.58);backdrop-filter:blur(4px)}
+.day-chip small{font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#D3DED7}
 [dir="rtl"] .day-chip small{letter-spacing:0;font-size:.85rem}
-.day-chip b{font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1.1;color:#FFF9EC;font-variant-numeric:tabular-nums}
+.day-chip b{font-family:var(--f-display);font-weight:500;font-size:2rem;line-height:1.1;color:#FFFCF5;font-variant-numeric:tabular-nums}
 .dates .where{display:grid;align-content:center;padding-inline-start:8px}
-.dates .where b{font-family:var(--f-display);font-weight:400;font-size:1.3rem;color:#E3C27E}
+.dates .where b{font-family:var(--f-display);font-weight:600;font-size:1.3rem;color:var(--gold-contrast)}
 [dir="rtl"] .dates .where b{font-family:var(--f-ar-display)}
-.dates .where span{color:#DDD5C1}
+.dates .where span{color:#E1E9E3}
 .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.countdown{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:16px 18px;border-radius:var(--radius);background:rgba(9,28,21,.55);border:1px solid rgba(227,194,126,.28);backdrop-filter:blur(6px);width:fit-content;max-width:100%}
-.countdown .lbl{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#E3C27E;font-weight:600;max-width:14ch;line-height:1.3}
+.countdown{display:flex;flex-wrap:wrap;gap:14px;align-items:center;padding:16px 18px;border-radius:var(--radius);background:rgba(15,44,40,.72);border:1px solid rgba(228,196,127,.26);backdrop-filter:blur(6px);width:fit-content;max-width:100%}
+.countdown .lbl{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-contrast);font-weight:600;max-width:14ch;line-height:1.3}
 [dir="rtl"] .countdown .lbl{letter-spacing:0;font-size:.95rem}
 .cd-units{display:flex;gap:10px}
 .cd-u{display:grid;justify-items:center;min-width:56px}
-.cd-u b{font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
-.cd-u small{font-size:.7rem;color:#C9C2AE;text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+.cd-u b{font-family:var(--f-display);font-weight:500;font-size:2rem;line-height:1;color:#FFFCF5;font-variant-numeric:tabular-nums}
+.cd-u small{font-size:.7rem;color:#D3DED7;text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
 [dir="rtl"] .cd-u small{letter-spacing:0;font-size:.82rem}
 .live-dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:#F0705F;box-shadow:0 0 0 0 rgba(240,112,95,.7);animation:pulse 1.8s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 10px rgba(240,112,95,0)}100%{box-shadow:0 0 0 0 rgba(240,112,95,0)}}
@@ -173,9 +176,9 @@ img{max-width:100%;height:auto;display:block}
 /* bande de chiffres */
 .facts{background:var(--dark-band-2);color:var(--on-dark)}
 .facts .wrap{display:grid;grid-template-columns:repeat(5,1fr);padding-block:22px}
-.fact{display:grid;gap:2px;padding-inline:16px;border-inline-start:1px solid rgba(227,194,126,.22)}
+.fact{display:grid;gap:2px;padding-inline:16px;border-inline-start:1px solid rgba(228,196,127,.15)}
 .fact:first-child{border-inline-start:0;padding-inline-start:0}
-.fact b{font-family:var(--f-display);font-weight:400;font-size:2rem;line-height:1;color:#E3C27E;font-variant-numeric:tabular-nums}
+.fact b{font-family:var(--f-display);font-weight:600;font-size:2rem;line-height:1;color:var(--gold-contrast);font-variant-numeric:tabular-nums}
 .fact span{font-size:.85rem;color:var(--on-dark-muted)}
 @media (max-width:760px){.facts .wrap{grid-template-columns:repeat(2,1fr);gap:18px 0}.fact{border:0;padding-inline:0}.fact:last-child{grid-column:1/-1}}
 
@@ -186,11 +189,11 @@ img{max-width:100%;height:auto;display:block}
 .about-text h2{font-size:var(--step-3);color:var(--ink)}
 .about-text p{color:var(--muted);max-width:62ch}
 .about-fig{position:relative}
-.about-fig img{border-radius:22px;box-shadow:0 30px 60px -30px rgba(14,42,32,.45);aspect-ratio:1385/1136;width:100%;object-fit:cover}
-.question{margin-top:8px;padding:22px 24px;border-radius:var(--radius);background:var(--sand);border-inline-start:3px solid var(--gold)}
-.question small{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+.about-fig img{border-radius:22px;box-shadow:0 30px 60px -30px rgba(18,30,26,.24);aspect-ratio:1385/1136;width:100%;object-fit:cover}
+.question{margin-top:8px;padding:22px 24px;border-radius:var(--radius);background:var(--sand);border:1px solid var(--line)}
+.question small{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);font-weight:700;margin-bottom:8px}
 [dir="rtl"] .question small{letter-spacing:0;font-size:.9rem}
-.question p{font-family:var(--f-display);font-size:var(--step-1);color:var(--ink);line-height:1.4}
+.question p{font-family:var(--f-quote);font-size:var(--step-1);color:var(--ink);line-height:1.5}
 [dir="rtl"] .question p{font-family:var(--f-ar-display)}
 @media (max-width:860px){.about{grid-template-columns:1fr}.about-fig{order:-1}}
 
@@ -201,12 +204,12 @@ img{max-width:100%;height:auto;display:block}
 .tab:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .tab small{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
 [dir="rtl"] .tab small{letter-spacing:0;font-size:.88rem}
-.tab b{font-family:var(--f-display);font-weight:400;font-size:clamp(1.15rem,1rem + .6vw,1.5rem);color:var(--ink);line-height:1.2}
+.tab b{font-family:var(--f-display);font-weight:600;font-size:clamp(1.15rem,1rem + .6vw,1.5rem);color:var(--ink);line-height:1.2}
 [dir="rtl"] .tab b{font-family:var(--f-ar-display);font-weight:700}
 .tab span{font-size:.82rem;color:var(--muted)}
 .tab[aria-selected="true"]{background:var(--dark-band);border-color:var(--dark-band)}
-.tab[aria-selected="true"] b{color:#FFF9EC}
-.tab[aria-selected="true"] small,.tab[aria-selected="true"] span{color:#E3C27E}
+.tab[aria-selected="true"] b{color:#FFFCF5}
+.tab[aria-selected="true"] small,.tab[aria-selected="true"] span{color:var(--gold-contrast)}
 .tab .today{position:absolute;top:10px;inset-inline-end:12px;font-size:.66rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 8px;border-radius:999px;background:var(--live);color:#fff}
 @media (max-width:560px){.tab span{display:none}.tab{padding:12px}}
 .day-panel{display:grid;grid-template-columns:280px 1fr;gap:clamp(20px,4vw,48px);align-items:start}
@@ -217,19 +220,22 @@ img{max-width:100%;height:auto;display:block}
 .day-meta .venue b{font-weight:600}
 .day-meta .venue span{color:var(--muted);font-size:.92rem}
 .day-meta p{color:var(--muted);font-size:.95rem}
-.day-meta .hours{font-family:var(--f-display);font-size:1.6rem;color:var(--gold);font-variant-numeric:tabular-nums}
+.day-meta .hours{font-family:var(--f-display);font-size:1.6rem;color:var(--gold-text);font-variant-numeric:tabular-nums}
 @media (max-width:860px){.day-panel{grid-template-columns:1fr}.day-meta{position:static}}
 .timeline{list-style:none;margin:0;padding:0;display:grid;gap:14px;position:relative}
 .slot{display:grid;grid-template-columns:118px 1fr;gap:18px;padding:20px 22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line)}
 .slot > *{min-width:0}
-.slot time{font-family:var(--f-display);font-size:1.12rem;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1.3}
+.slot time{font-family:var(--f-display);font-size:1.12rem;color:var(--gold-text);font-variant-numeric:tabular-nums;line-height:1.3}
 [dir="rtl"] .slot time{font-family:var(--f-ar-body);font-weight:600;font-size:1rem}
 .slot h4{font-size:var(--step-1);color:var(--ink);margin-bottom:6px}
 .slot > div > p{color:var(--muted)}
-.slot.now{border-color:var(--live);box-shadow:0 0 0 1px var(--live)}
+.slot.now{border-color:var(--live)}
 .now-tag{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--live);margin-bottom:6px}
 .now-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
-@media (max-width:600px){.slot{grid-template-columns:1fr;gap:6px;padding:18px}}
+.slot.pause{padding-block:10px;background:transparent;border-style:dashed}
+.slot.pause time{font-size:.95rem;color:var(--muted)}
+.slot.pause h4{font-family:var(--f-body);font-size:.98rem;font-weight:500;color:var(--muted);margin:0}
+@media (max-width:600px){.slot{grid-template-columns:1fr;gap:6px;padding:18px}.slot.pause{gap:2px;padding-block:10px}}
 .sublist{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:6px}
 .sublist li{position:relative;padding-inline-start:18px;color:var(--fg);font-size:.95rem}
 .sublist li::before{content:"";position:absolute;inset-inline-start:2px;top:.62em;width:7px;height:7px;transform:rotate(45deg);background:var(--gold)}
@@ -238,7 +244,7 @@ img{max-width:100%;height:auto;display:block}
 .axis summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px}
 .axis summary::-webkit-details-marker{display:none}
 .axis summary > *{min-width:0}
-.axis .num{font-family:var(--f-display);color:var(--gold);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
+.axis .num{font-family:var(--f-display);color:var(--gold-text);font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
 [dir="rtl"] .axis .num{font-family:var(--f-ar-body);letter-spacing:0;font-size:.9rem;font-weight:600}
 .axis .ttl{font-weight:600;color:var(--ink);line-height:1.35}
 .axis .chev{width:20px;height:20px;transition:transform .25s;color:var(--muted)}
@@ -248,65 +254,65 @@ img{max-width:100%;height:auto;display:block}
 .spk-mini{display:grid;gap:10px}
 .spk-mini div{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start}
 .spk-mini div > *{min-width:0}
-.mono{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--dark-band);color:#E3C27E;font-family:var(--f-display);font-size:.85rem}
+.mono{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--dark-band);color:var(--gold-contrast);font-family:var(--f-display);font-size:.85rem}
 .spk-mini b{display:block;color:var(--ink);font-weight:600;font-size:.95rem}
 .spk-mini span{display:block;color:var(--muted);font-size:.88rem;font-style:italic}
-.interlude{display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--muted);padding:12px 16px;border-radius:12px;border:1px dashed var(--line);margin-top:10px}
+.interlude{display:flex;gap:10px;align-items:center;font-size:.9rem;color:var(--muted);padding:12px 16px;border-radius:12px;border:1px solid var(--line);margin-top:10px}
 .prog-foot{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;align-items:center}
 .prog-foot p{color:var(--muted);font-size:.9rem;margin-inline-end:auto;max-width:56ch}
 
 /* ---------- Intervenants ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .chip{all:unset;cursor:pointer;padding:8px 16px;border-radius:999px;border:1px solid var(--line);font-size:.88rem;font-weight:600;color:var(--fg);background:var(--surface)}
-.chip[aria-pressed="true"]{background:var(--dark-band);border-color:var(--dark-band);color:#FFF9EC}
+.chip[aria-pressed="true"]{background:var(--dark-band);border-color:var(--dark-band);color:var(--on-dark)}
 .chip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .speakers{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:14px}
 .spk{display:grid;grid-template-columns:auto 1fr;gap:16px;padding:20px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);align-content:start}
 .spk > *{min-width:0}
-.seal{width:56px;height:56px;display:grid;place-items:center;position:relative;color:#E3C27E;font-family:var(--f-display);font-size:1.05rem;isolation:isolate}
+.seal{width:56px;height:56px;display:grid;place-items:center;position:relative;color:var(--gold-contrast);font-family:var(--f-display);font-size:1.05rem;isolation:isolate}
 .seal::before,.seal::after{content:"";position:absolute;inset:6px;background:var(--dark-band);border-radius:6px;z-index:-1}
 .seal::after{transform:rotate(45deg)}
-.spk .tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.spk .tag{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-text)}
 [dir="rtl"] .spk .tag{letter-spacing:0;font-size:.85rem}
 .spk h3{font-family:var(--f-body);font-weight:700;font-size:1.05rem;color:var(--ink);margin:4px 0 4px;line-height:1.3}
 [dir="rtl"] .spk h3{font-family:var(--f-ar-body)}
 .spk .role{font-size:.88rem;color:var(--muted)}
-.spk .talk{margin-top:10px;font-family:var(--f-display);font-size:1.02rem;color:var(--fg);line-height:1.4}
+.spk .talk{margin-top:10px;font-family:var(--f-quote);font-size:1.02rem;color:var(--fg);line-height:1.5}
 .spk .talk::before{content:"« "}.spk .talk::after{content:" »"}
 
 /* ---------- Hommages & exposition ---------- */
 .dark-band{background:var(--dark-band);color:var(--on-dark)}
-.dark-band .sec-head h2{color:#FFF9EC}
+.dark-band .sec-head h2{color:#FFFCF5}
 .dark-band .sec-head p{color:var(--on-dark-muted)}
-.dark-band .eyebrow{color:#E3C27E}
+.dark-band .eyebrow{color:var(--gold-contrast)}
 .honors{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:clamp(48px,7vw,88px)}
-.honor{padding:26px 24px;border-radius:var(--radius);border:1px solid rgba(227,194,126,.3);background:rgba(255,255,255,.03);display:grid;gap:10px;align-content:start}
-.honor small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#E3C27E;font-weight:700}
+.honor{padding:26px 24px;border-radius:var(--radius);border:1px solid rgba(228,196,127,.2);background:rgba(255,255,255,.03);display:grid;gap:10px;align-content:start}
+.honor small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-contrast);font-weight:700}
 [dir="rtl"] .honor small{letter-spacing:0;font-size:.88rem}
-.honor h3{font-size:var(--step-1);color:#FFF9EC}
+.honor h3{font-size:var(--step-1);color:#FFFCF5}
 .honor p{color:var(--on-dark-muted);font-size:.95rem}
 @media (max-width:860px){.honors{grid-template-columns:1fr}}
 .expo-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px}
 .expo-head > div:first-child{display:grid;gap:12px}
-.expo-head h3{font-size:var(--step-2);color:#FFF9EC;max-width:24ch}
+.expo-head h3{font-size:var(--step-2);color:#FFFCF5;max-width:24ch}
 .expo-head p{color:var(--on-dark-muted);max-width:46ch;font-size:.95rem}
 .rail-wrap{position:relative}
-.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,280px);gap:0;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:#C99A45 transparent}
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(240px,280px);gap:0;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:14px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
 .stop{scroll-snap-align:start;padding:0 22px 0 0;position:relative;display:grid;gap:10px;align-content:start}
 [dir="rtl"] .stop{padding:0 0 0 22px}
-.stop .yr{font-family:var(--f-display);font-size:2.6rem;line-height:1;color:#E3C27E;font-variant-numeric:tabular-nums}
-.stop .bar{height:1px;background:rgba(227,194,126,.4);position:relative;margin-block:4px 8px}
-.stop .bar::before{content:"";position:absolute;inset-inline-start:0;top:-5px;width:11px;height:11px;transform:rotate(45deg);background:#C99A45}
-.stop h4{font-family:var(--f-body);font-weight:700;font-size:1rem;color:#FFF9EC;line-height:1.35}
+.stop .yr{font-family:var(--f-display);font-size:2.6rem;line-height:1;color:var(--gold-contrast);font-variant-numeric:tabular-nums}
+.stop .bar{height:1px;background:rgba(228,196,127,.3);position:relative;margin-block:4px 8px}
+.stop .bar::before{content:"";position:absolute;inset-inline-start:0;top:-3px;width:7px;height:7px;border-radius:50%;background:var(--gold-contrast)}
+.stop h4{font-family:var(--f-body);font-weight:700;font-size:1rem;color:#FFFCF5;line-height:1.35}
 [dir="rtl"] .stop h4{font-family:var(--f-ar-body)}
 .stop p{font-size:.9rem;color:var(--on-dark-muted)}
 .rail-nav{display:flex;gap:8px}
-.rail-nav button{all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;border:1px solid rgba(227,194,126,.45);display:grid;place-items:center;color:#E3C27E}
-.rail-nav button:focus-visible{outline:2px solid #C99A45}
+.rail-nav button{all:unset;cursor:pointer;width:42px;height:42px;border-radius:50%;border:1px solid rgba(228,196,127,.32);display:grid;place-items:center;color:var(--gold-contrast)}
+.rail-nav button:focus-visible{outline:2px solid var(--gold-contrast)}
 .rail-nav svg{width:18px;height:18px}
 [dir="rtl"] .rail-nav svg{transform:scaleX(-1)}
-.memorial{margin-top:28px;padding:22px 24px;border-radius:var(--radius);background:rgba(201,154,69,.1);border:1px solid rgba(227,194,126,.3);display:grid;gap:6px}
-.memorial b{font-family:var(--f-display);font-weight:400;font-size:var(--step-1);color:#FFF9EC}
+.memorial{margin-top:28px;padding:22px 24px;border-radius:var(--radius);background:rgba(176,127,46,.13);border:1px solid rgba(228,196,127,.24);display:grid;gap:6px}
+.memorial b{font-family:var(--f-display);font-weight:600;font-size:var(--step-1);color:#FFFCF5}
 [dir="rtl"] .memorial b{font-family:var(--f-ar-display);font-weight:700}
 .memorial p{color:var(--on-dark-muted);font-size:.95rem;max-width:72ch}
 
@@ -316,14 +322,19 @@ img{max-width:100%;height:auto;display:block}
 .venues{display:grid;gap:14px}
 .venue-card{display:grid;grid-template-columns:1fr auto;gap:18px;padding:22px;border-radius:var(--radius);background:var(--surface);border:1px solid var(--line);align-items:center}
 .venue-card > *{min-width:0}
-.venue-card small{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.venue-card small{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--gold-text)}
 [dir="rtl"] .venue-card small{letter-spacing:0;font-size:.88rem}
 .venue-card h3{font-size:var(--step-2);color:var(--ink);margin:4px 0 6px}
 .venue-card p{color:var(--muted);font-size:.95rem}
 .venue-card .acts{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.qr{width:132px;border-radius:12px;background:#fff;padding:6px;border:1px solid var(--line)}
-.qr img{width:100%;aspect-ratio:1060/1200;object-fit:cover}
-@media (max-width:560px){.venue-card{grid-template-columns:1fr}.qr{width:150px}}
+.qr{margin:0;width:clamp(220px,24vw,280px);display:grid;gap:10px;justify-items:center;padding:14px;border-radius:18px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 40px -24px rgba(18,30,26,.35)}
+.qr img{width:100%;aspect-ratio:1/1;image-rendering:pixelated;image-rendering:crisp-edges}
+.qr figcaption{font-size:.85rem;font-weight:600;color:#1F4741;text-align:center;line-height:1.3}
+.venue-main{align-items:center;gap:clamp(18px,3vw,32px)}
+.hours-list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:6px;max-width:340px}
+.hours-list li{display:flex;justify-content:space-between;gap:12px;padding:8px 12px;border-radius:10px;background:var(--sand);font-size:.95rem}
+.hours-list b{font-variant-numeric:tabular-nums;color:var(--ink);direction:ltr}
+@media (max-width:700px){.venue-card{grid-template-columns:1fr}.qr{width:min(100%,300px);justify-self:center}}
 .side{display:grid;gap:14px}
 .side figure{margin:0;position:relative}
 .side figure img{border-radius:var(--radius);aspect-ratio:4/5;width:100%;height:auto;object-fit:cover;object-position:50% 40%}
@@ -337,7 +348,7 @@ img{max-width:100%;height:auto;display:block}
 .doc{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);text-decoration:none;transition:border-color .2s,transform .2s}
 .doc > *{min-width:0}
 .doc:hover{border-color:var(--gold);transform:translateY(-2px)}
-.doc .ic{width:44px;height:52px;border-radius:6px;background:var(--dark-band);color:#E3C27E;display:grid;place-items:center;font-size:.7rem;font-weight:700;letter-spacing:.08em}
+.doc .ic{width:44px;height:52px;border-radius:6px;background:var(--dark-band);color:var(--gold-contrast);display:grid;place-items:center;font-size:.7rem;font-weight:700;letter-spacing:.08em}
 .doc b{display:block;color:var(--ink);font-weight:600}
 .doc span{display:block;color:var(--muted);font-size:.85rem}
 @media (max-width:860px){.docs{grid-template-columns:1fr}}
@@ -351,11 +362,11 @@ img{max-width:100%;height:auto;display:block}
 .org-ar{font-family:var(--f-ar-display);font-size:clamp(1.4rem,1.2rem + .8vw,1.9rem);color:var(--green);line-height:1.5}
 .recepisse{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:.9rem;color:var(--muted);padding-top:14px;border-top:1px solid var(--line)}
 .recepisse b{color:var(--fg);font-weight:600}
-.bureau-fig{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:#FBF8F1;position:relative}
+.bureau-fig{margin:0;border-radius:22px;overflow:hidden;border:1px solid var(--line);background:var(--surface);position:relative}
 .bureau-fig button{all:unset;cursor:zoom-in;display:block}
 .bureau-fig button:focus-visible{outline:2px solid var(--gold);outline-offset:-4px}
-.bureau-fig img{width:100%;aspect-ratio:1041/1000;object-fit:cover;object-position:50% 0}
-.bureau-fig figcaption{position:absolute;inset:auto 0 0;padding:40px 18px 14px;background:linear-gradient(0deg,rgba(14,42,32,.9),rgba(14,42,32,0));color:#FFF9EC;font-size:.9rem;display:flex;justify-content:space-between;gap:10px;pointer-events:none}
+.bureau-fig img{width:100%;aspect-ratio:1131/1600;object-fit:contain}
+.bureau-fig figcaption{position:absolute;inset:auto 0 0;padding:40px 18px 14px;background:linear-gradient(0deg,rgba(15,44,40,.92),rgba(15,44,40,0));color:#FFFCF5;font-size:.9rem;display:flex;justify-content:space-between;gap:10px;pointer-events:none}
 @media (max-width:860px){.org{grid-template-columns:1fr}}
 dialog{border:0;padding:0;background:transparent;max-width:min(96vw,900px);max-height:92vh}
 dialog::backdrop{background:rgba(5,14,10,.85)}
@@ -373,44 +384,44 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
 .contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:start}
 .contact > *{min-width:0}
 .lines{display:grid;gap:10px}
-.line{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(227,194,126,.25)}
+.line{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:12px 14px;border-radius:12px;background:rgba(255,255,255,.025);border:1px solid rgba(228,196,127,.18)}
 .line > *{min-width:0}
-.line .v{font-variant-numeric:tabular-nums;font-weight:600;color:#FFF9EC;overflow-wrap:anywhere;direction:ltr;text-align:start}
+.line .v{font-variant-numeric:tabular-nums;font-weight:600;color:#FFFCF5;overflow-wrap:anywhere;direction:ltr;text-align:start}
 [dir="rtl"] .line .v{text-align:end}
 .line .v small{display:block;font-weight:400;color:var(--on-dark-muted);font-size:.8rem;direction:inherit}
-.icon-btn{all:unset;cursor:pointer;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(227,194,126,.4);color:#E3C27E;text-decoration:none}
-.icon-btn:hover{background:rgba(201,154,69,.15)}
-.icon-btn:focus-visible{outline:2px solid #C99A45}
+.icon-btn{all:unset;cursor:pointer;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(228,196,127,.28);color:var(--gold-contrast);text-decoration:none}
+.icon-btn:hover{background:rgba(176,127,46,.2)}
+.icon-btn:focus-visible{outline:2px solid var(--gold-contrast)}
 .icon-btn svg{width:18px;height:18px}
-.form{display:grid;gap:14px;padding:clamp(20px,3vw,28px);border-radius:var(--radius);background:rgba(255,255,255,.04);border:1px solid rgba(227,194,126,.25)}
+.form{display:grid;gap:14px;padding:clamp(20px,3vw,28px);border-radius:var(--radius);background:rgba(255,255,255,.025);border:1px solid rgba(228,196,127,.18)}
 .form label{display:grid;gap:6px;font-size:.88rem;color:var(--on-dark-muted)}
-.form input,.form textarea,.form select{font:inherit;color:#FFF9EC;background:rgba(0,0,0,.25);border:1px solid rgba(227,194,126,.3);border-radius:10px;padding:12px 14px;width:100%}
+.form input,.form textarea,.form select{font:inherit;color:#FFFCF5;background:rgba(0,0,0,.25);border:1px solid rgba(228,196,127,.24);border-radius:10px;padding:12px 14px;width:100%}
 .form textarea{min-height:120px;resize:vertical}
-.form input:focus,.form textarea:focus,.form select:focus{outline:2px solid #C99A45;outline-offset:1px}
+.form input:focus,.form textarea:focus,.form select:focus{outline:2px solid var(--gold-contrast);outline-offset:1px}
 .form select option{color:#111}
 .form .row{display:flex;flex-wrap:wrap;gap:10px}
 .form .hint{font-size:.8rem;color:var(--on-dark-muted)}
-.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:#13231B;color:#FFF9EC;padding:10px 18px;border-radius:999px;font-size:.9rem;z-index:70;border:1px solid #C99A45}
+.toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--dark-band);color:#FFFCF5;padding:10px 18px;border-radius:999px;font-size:.9rem;z-index:70;border:1px solid rgba(228,196,127,.45)}
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
 
 /* ---------- Pied ---------- */
-.foot{background:#07120E;color:#C9C2AE;padding-block:40px calc(40px + env(safe-area-inset-bottom,0px))}
+.foot{background:var(--dark-band);color:#D3DED7;padding-block:40px calc(40px + env(safe-area-inset-bottom,0px))}
 .foot .wrap{display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center}
 .foot .wrap > *{min-width:0}
 .foot img{width:64px;height:64px;border-radius:50%}
-.foot .ar{font-family:var(--f-ar-display);font-size:1.4rem;color:#E3C27E;line-height:1.4}
+.foot .ar{font-family:var(--f-ar-display);font-size:1.4rem;color:var(--gold-contrast);line-height:1.4}
 .foot p{font-size:.88rem}
 .foot nav{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.88rem}
 .foot nav a{text-decoration:none;color:#E7E0CD}
-.foot nav a:hover{color:#E3C27E}
+.foot nav a:hover{color:var(--gold-contrast)}
 @media (max-width:760px){.foot .wrap{grid-template-columns:1fr}}
 
 /* barre d'actions mobile */
 .dock{display:none}
 @media (max-width:760px){
-  .dock{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;inset:auto 0 0;z-index:55;background:rgba(14,42,32,.96);backdrop-filter:blur(10px);border-top:1px solid rgba(201,154,69,.3);padding:8px max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px))}
-  .dock a{display:grid;justify-items:center;gap:3px;text-decoration:none;color:#E7E0CD;font-size:.74rem;font-weight:600;padding:6px 4px;border-radius:10px}
-  .dock a svg{width:22px;height:22px;color:#E3C27E}
+  .dock{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;inset:auto 0 0;z-index:55;background:rgba(31,71,65,.97);backdrop-filter:blur(10px);border-top:1px solid rgba(228,196,127,.24);padding:8px max(10px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px))}
+  .dock a{display:grid;justify-items:center;gap:3px;text-decoration:none;color:#E1E9E3;font-size:.74rem;font-weight:600;padding:6px 4px;border-radius:10px}
+  .dock a svg{width:22px;height:22px;color:var(--gold-contrast)}
   .foot{padding-bottom:calc(96px + env(safe-area-inset-bottom,0px))}
 }
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
@@ -477,8 +488,8 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
           <div class="day-chip"><small data-i18n="sun">Dim.</small><b>08</b></div>
           <div class="where"><b data-i18n="nov2026">Novembre 2026</b><span data-i18n="place">Sidi Maarouf · Casablanca</span></div>
         </div>
-        <div class="countdown" id="countdown" aria-live="polite">
-          <span class="lbl" id="cdLabel" data-i18n="cdBefore">Ouverture dans</span>
+        <div class="countdown" id="countdown">
+          <span class="lbl" id="cdLabel" data-i18n="cdBefore" aria-live="polite" aria-atomic="true">Ouverture dans</span>
           <div class="cd-units" id="cdUnits">
             <div class="cd-u"><b id="cdD">–</b><small data-i18n="days">jours</small></div>
             <div class="cd-u"><b id="cdH">–</b><small data-i18n="hours">heures</small></div>
@@ -492,7 +503,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
         </div>
       </div>
     </div>
-    <span class="credit" data-i18n="credit">Mosquée Hassan II, Casablanca · Photo Morocco Vibes</span>
+    <span class="credit" data-i18n="credit">Mosquée Hassan II, Casablanca</span>
   </section>
 
   <!-- CHIFFRES -->
@@ -537,7 +548,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       <div id="dayPanel"></div>
       <div class="prog-foot">
         <p data-i18n="progNote">Des séquences culturelles et spirituelles de Dhikr et de Madih ponctuent les interventions. Traduction simultanée arabe–français.</p>
-        <a class="btn btn-green" href="https://colloque.ansaar-ma.com/assets/programme-colloque-casablanca-2026-v15.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg><span data-i18n="dlProg">Programme détaillé · PDF</span></a>
+        <a class="btn btn-green" href="docs/programme-officiel-colloque-2026-es.pdf" target="_blank" rel="noopener"><svg><use href="#i-dl"/></svg><span data-i18n="dlProg">Programme officiel · PDF</span></a>
         <a class="btn btn-line" id="calLink" href="#" target="_blank" rel="noopener"><svg><use href="#i-cal"/></svg><span data-i18n="addCal">Ajouter à mon agenda</span></a>
       </div>
     </div>
@@ -592,43 +603,42 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       </div>
       <div class="infos">
         <div class="venues">
-          <article class="venue-card">
+          <article class="venue-card venue-main">
             <div>
-              <small data-i18n="v1When">Vendredi 6 novembre · après l'Asr</small>
-              <h3 data-i18n="v1Name">Centre Culturel Sidi Maarouf</h3>
-              <p data-i18n="v1Text">Ouverture spirituelle, Hayllala, Dhikr et assemblées des Shuyoukh.</p>
+              <small data-i18n="v2When">Vendredi 6, samedi 7 et dimanche 8 novembre</small>
+              <h3 data-i18n="v2Name">Salle des fêtes Cristalia</h3>
+              <p data-i18n="v2Text">Lieu unique des trois journées du colloque, à Sidi Maarouf, Casablanca.</p>
+              <ul class="hours-list">
+                <li><span data-i18n="hFri">Vendredi 6</span><b>16:00 – 22:30</b></li>
+                <li><span data-i18n="hSat">Samedi 7</span><b>11:00 – 22:00</b></li>
+                <li><span data-i18n="hSun">Dimanche 8</span><b>09:00 – 16:00</b></li>
+              </ul>
               <div class="acts">
+                <a class="btn btn-green" href="https://maps.app.goo.gl/rKhbDGGFphEzyyer8" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span data-i18n="openMaps">Ouvrir dans Google Maps</span></a>
                 <a class="btn btn-line" id="v1Wa" href="https://wa.me/212645570124" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span data-i18n="askAccess">Demander l'accès</span></a>
               </div>
             </div>
-          </article>
-          <article class="venue-card">
-            <div>
-              <small data-i18n="v2When">Samedi 7 (13 h – 21 h) · Dimanche 8 (9 h – 13 h)</small>
-              <h3 data-i18n="v2Name">Salle des fêtes Cristalia</h3>
-              <p data-i18n="v2Text">Cérémonie d'ouverture, panels, exposition documentaire et cérémonie de clôture. Sidi Maarouf, Casablanca.</p>
-              <div class="acts">
-                <a class="btn btn-green" href="https://maps.app.goo.gl/rKhbDGGFphEzyyer8" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span data-i18n="openMaps">Ouvrir dans Google Maps</span></a>
-              </div>
-            </div>
-            <div class="qr"><img src="img/qr-cristalia.webp" alt="QR code vers l'emplacement de la Salle Cristalia sur Google Maps" width="600" height="679" loading="lazy"></div>
+            <figure class="qr">
+              <img src="img/qr-cristalia.png" alt="QR code vers l'emplacement de la Salle des fêtes Cristalia sur Google Maps" width="820" height="820" loading="lazy">
+              <figcaption data-i18n="qrCap">Scannez pour ouvrir l'itinéraire</figcaption>
+            </figure>
           </article>
           <div class="notes">
             <div><svg><use href="#i-lang"/></svg><span data-i18n="n1">Traduction simultanée arabe–français pendant les panels.</span></div>
-            <div><svg><use href="#i-cal"/></svg><span data-i18n="n2">Clôture le dimanche à 13 h, suivie d'un déjeuner fraternel en l'honneur des participants et des invités.</span></div>
+            <div><svg><use href="#i-cal"/></svg><span data-i18n="n2">Clôture du colloque le dimanche à 15 h, suivie d'un déjeuner fraternel en l'honneur des participants et des invités.</span></div>
             <div><svg><use href="#i-wa"/></svg><span data-i18n="n3">Hébergement, accès et accréditations presse : écrivez à l'organisation sur WhatsApp.</span></div>
           </div>
         </div>
         <aside class="side">
           <figure>
             <img src="img/vue-aerienne.webp" alt="Vue aérienne de la mosquée Hassan II sur l'océan, à Casablanca" width="768" height="1290" loading="lazy">
-            <figcaption data-i18n="aerialCap">Casablanca, ville hôte du colloque · Photo Morocco Vibes</figcaption>
+            <figcaption data-i18n="aerialCap">Casablanca, ville hôte du colloque</figcaption>
           </figure>
         </aside>
       </div>
       <div class="docs">
         <a class="doc" href="https://colloque.ansaar-ma.com/assets/note-conceptuelle-colloque-casablanca-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d1">Note conceptuelle</b><span data-i18n="d1s">9 pages</span></span></a>
-        <a class="doc" href="https://colloque.ansaar-ma.com/assets/programme-colloque-casablanca-2026-v15.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d2">Programme détaillé</b><span data-i18n="d2s">5 pages · version 15</span></span></a>
+        <a class="doc" href="docs/programme-officiel-colloque-2026-es.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d2">Programme officiel</b><span data-i18n="d2s">10 pages · version espagnole</span></span></a>
         <a class="doc" href="https://colloque.ansaar-ma.com/assets/carte-invitation-colloque-casablanca-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d3">Carte d'invitation</b><span data-i18n="d3s">Recto-verso</span></span></a>
       </div>
     </div>
@@ -647,7 +657,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       </div>
       <figure class="bureau-fig">
         <button type="button" id="bureauOpen" aria-label="Agrandir l'organigramme du bureau">
-          <img src="img/bureau-2025-2028.webp" alt="Organigramme du bureau, mars 2025 – mars 2028 : président Cheikh Ibrahim Diop, vice-président Mamadou Gueye, secrétaire général Mamadel Hady Thiam, trésorier général Amadou Tandine, et présidents de commissions" width="1041" height="1403" loading="lazy">
+          <img src="img/bureau-2025-2028-v2.webp" alt="Organigramme du bureau Ansaarud-Dîn Maroc, mars 2025 – mars 2028 : président Cheikh Ibrahim Diop, vice-président Mamadou Gueye, secrétaire général Mamadel Hady Thiam, trésorier général Amadou Tandine, et présidents de commissions" width="1131" height="1600" loading="lazy">
         </button>
         <figcaption><span data-i18n="bureauCap">Bureau · mars 2025 – mars 2028</span><span data-i18n="zoom">Agrandir</span></figcaption>
       </figure>
@@ -726,7 +736,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
 </nav>
 
 <dialog id="bureauDlg" aria-label="Organigramme du bureau">
-  <img src="img/bureau-2025-2028.webp" alt="Organigramme du bureau, mars 2025 – mars 2028">
+  <img src="img/bureau-2025-2028-v2.webp" alt="Organigramme du bureau Ansaarud-Dîn Maroc, mars 2025 – mars 2028">
   <button class="close" type="button" id="bureauClose" data-i18n="close">Fermer</button>
 </dialog>
 <div class="toast" id="toast" hidden></div>
@@ -743,7 +753,7 @@ const T = {
     heroLead:"Spiritual diplomacy and bilateral relations: the role of States and religious leaders in strengthening ties between Morocco and Senegal.",
     fri:"Fri",sat:"Sat",sun:"Sun",nov2026:"November 2026",place:"Sidi Maarouf · Casablanca",
     cdBefore:"Opening in",cdLive:"Happening now",cdDone:"Thank you for joining us",days:"days",hours:"hrs",mins:"min",secs:"sec",
-    ctaProg:"See the programme",ctaMap:"Directions · Cristalia hall",credit:"Hassan II Mosque, Casablanca · Photo Morocco Vibes",
+    ctaProg:"See the programme",ctaMap:"Directions · Cristalia hall",credit:"Hassan II Mosque, Casablanca",
     fDays:"days of meetings",fPanels:"academic panels",fAxes:"themes",fSpk:"speakers",fTrad:"simultaneous translation",
     aboutEyebrow:"The colloquium",aboutTitle:"A spiritual bridge between two nations",
     aboutP1:"From 6 to 8 November 2026, scholars, Shuyukh, researchers and institutional and local leaders meet in Casablanca to examine how spiritual diplomacy strengthens ties between the Kingdom of Morocco and the Republic of Senegal, and serves peace.",
@@ -751,17 +761,17 @@ const T = {
     qLabel:"Central question",qText:"How can States, religious leaders and local leaders, drawing on Sufism and its networks, strengthen ties between Morocco and Senegal and contribute to peace?",
     progEyebrow:"Programme",progTitle:"Three days, three highlights",progLead:"Tap a theme to see its topics and speakers. The programme is updated live during the colloquium.",
     progNote:"Cultural and spiritual Dhikr and Madih sequences punctuate the talks. Arabic–French simultaneous translation.",
-    dlProg:"Full programme · PDF",addCal:"Add to my calendar",today:"Today",now:"Now",
+    dlProg:"Official programme · PDF",addCal:"Add to my calendar",today:"Today",now:"Now",
     spkEyebrow:"Speakers",spkTitle:"Fifteen voices from Morocco, Senegal and Nigeria",spkLead:"Scholars, researchers, diplomats and spiritual guides. Talk titles are given in their French version.",
     all:"All",opening:"Opening",panel1:"Panel 1 · Sat",panel2:"Panel 2 · Sun",
     honEyebrow:"Official tributes",honTitle:"Honoured figures",
     expoEyebrow:"Documentary exhibition",expoTitle:"Milestones in Moroccan–Senegalese ties",
     memTitle:"Memorial space · Sayyida Rokhaya bint Cheikh Ibrahim Niass",memText:"A space dedicated to her spiritual and educational work, and her role in transmitting, preserving and safeguarding the legacy of Mawlana Cheikh Ibrahim Niass.",
     infoEyebrow:"Practical info",infoTitle:"Plan your visit",
-    v1When:"Friday 6 November · after Asr prayer",v1Name:"Sidi Maarouf Cultural Centre",v1Text:"Spiritual opening, Hayllala, Dhikr and gatherings of the Shuyukh.",askAccess:"Ask for directions",
-    v2When:"Saturday 7 (1–9 pm) · Sunday 8 (9 am–1 pm)",v2Name:"Cristalia reception hall",v2Text:"Opening ceremony, panels, documentary exhibition and closing ceremony. Sidi Maarouf, Casablanca.",openMaps:"Open in Google Maps",
-    n1:"Arabic–French simultaneous translation during the panels.",n2:"Closing on Sunday at 1 pm, followed by a fraternal lunch for participants and guests.",n3:"Accommodation, access and press accreditation: message the organisers on WhatsApp.",
-    aerialCap:"Casablanca, host city · Photo Morocco Vibes",d1:"Concept note",d1s:"9 pages",d2:"Full programme",d2s:"5 pages · version 15",d3:"Invitation card",d3s:"Two-sided",
+    askAccess:"Ask for directions",hFri:"Friday 6",hSat:"Saturday 7",hSun:"Sunday 8",qrCap:"Scan to open directions",
+    v2When:"Friday 6, Saturday 7 and Sunday 8 November",v2Name:"Cristalia reception hall",v2Text:"The single venue for all three days of the colloquium, in Sidi Maarouf, Casablanca.",openMaps:"Open in Google Maps",
+    n1:"Arabic–French simultaneous translation during the panels.",n2:"The colloquium closes on Sunday at 3 pm, followed by a fraternal lunch for participants and guests.",n3:"Accommodation, access and press accreditation: message the organisers on WhatsApp.",
+    aerialCap:"Casablanca, host city",d1:"Concept note",d1s:"9 pages",d2:"Official programme",d2s:"10 pages · Spanish version",d3:"Invitation card",d3s:"Two-sided",
     orgEyebrow:"The organiser",orgP1:"A religious and social association affiliated with the National Federation of Senegal, Jamhiyatou Ansaarud-Dîn carries the motto “Nahnu Ansaarullâh”. Its Morocco Chapter organises this colloquium in Casablanca.",
     orgP2:"The board serving from March 2025 to March 2028 coordinates the women's, communication, organisation and cultural committees.",recLabel:"Registration",recDate:"of 31 October 1960",bureauCap:"Board · March 2025 – March 2028",zoom:"Enlarge",close:"Close",
     partEyebrow:"Partners",partTitle:"Associate your institution with the colloquium",partText:"Institutions, local authorities, businesses and media: official partners will be presented here and at the opening ceremony on Saturday 7 November.",partCta:"Become a partner",
@@ -778,7 +788,7 @@ const T = {
     heroLead:"الدبلوماسية الروحية والعلاقات الثنائية: دور الدول والزعماء الدينيين في تعزيز التقارب بين المغرب والسنغال.",
     fri:"الجمعة",sat:"السبت",sun:"الأحد",nov2026:"نونبر 2026",place:"سيدي معروف · الدار البيضاء",
     cdBefore:"الافتتاح بعد",cdLive:"الندوة جارية الآن",cdDone:"شكراً لحضوركم",days:"يوم",hours:"ساعة",mins:"دقيقة",secs:"ثانية",
-    ctaProg:"اطّلع على البرنامج",ctaMap:"الطريق إلى قاعة كريستاليا",credit:"مسجد الحسن الثاني، الدار البيضاء · صورة Morocco Vibes",
+    ctaProg:"اطّلع على البرنامج",ctaMap:"الطريق إلى قاعة كريستاليا",credit:"مسجد الحسن الثاني، الدار البيضاء",
     fDays:"أيام من اللقاءات",fPanels:"جلستان علميتان",fAxes:"محاور للنقاش",fSpk:"متدخلاً",fTrad:"ترجمة فورية",
     aboutEyebrow:"الندوة",aboutTitle:"جسر روحي بين أمّتين",
     aboutP1:"من 6 إلى 8 نونبر 2026، يلتقي العلماء والشيوخ والباحثون والمسؤولون المؤسساتيون والترابيون في الدار البيضاء لبحث كيف تُرسّخ الدبلوماسية الروحية التقارب بين المملكة المغربية وجمهورية السنغال وتخدم السلام.",
@@ -786,17 +796,17 @@ const T = {
     qLabel:"الإشكالية المركزية",qText:"كيف يمكن للدول والزعماء الدينيين والمسؤولين الترابيين، استناداً إلى التصوف وشبكاته، تعزيز التقارب بين المغرب والسنغال والإسهام في السلام؟",
     progEyebrow:"البرنامج",progTitle:"ثلاثة أيام، ثلاث محطات",progLead:"اضغط على محور لعرض مواضيعه والمتدخلين فيه. يُحدَّث البرنامج مباشرة خلال الندوة.",
     progNote:"تتخلل المداخلاتِ فقراتٌ ثقافية وروحية من الذكر والمديح. ترجمة فورية عربية–فرنسية.",
-    dlProg:"البرنامج المفصل · PDF",addCal:"أضف إلى مفكرتي",today:"اليوم",now:"الآن",
+    dlProg:"البرنامج الرسمي · PDF",addCal:"أضف إلى مفكرتي",today:"اليوم",now:"الآن",
     spkEyebrow:"المتدخلون",spkTitle:"خمسة عشر صوتاً من المغرب والسنغال ونيجيريا",spkLead:"علماء وباحثون ودبلوماسيون ومرشدون روحيون. عناوين المداخلات مذكورة بصيغتها الفرنسية.",
     all:"الكل",opening:"الافتتاح",panel1:"الجلسة 1 · السبت",panel2:"الجلسة 2 · الأحد",
     honEyebrow:"التكريمات الرسمية",honTitle:"شخصيات مكرَّمة",
     expoEyebrow:"معرض وثائقي",expoTitle:"محطات تاريخية في التقارب المغربي السنغالي",
     memTitle:"فضاء تذكاري · السيدة رقية بنت الشيخ إبراهيم انياس",memText:"فضاء مخصص لجهودها الروحية والتربوية ودورها في نقل إرث مولانا الشيخ إبراهيم انياس وصونه والحفاظ عليه.",
     infoEyebrow:"معلومات عملية",infoTitle:"استعدّ لحضورك",
-    v1When:"الجمعة 6 نونبر · بعد صلاة العصر",v1Name:"المركز الثقافي سيدي معروف",v1Text:"افتتاح روحي، هيللة، ذكر ومجالس الشيوخ.",askAccess:"اطلب معلومات الوصول",
-    v2When:"السبت 7 (13:00–21:00) · الأحد 8 (09:00–13:00)",v2Name:"قاعة الحفلات كريستاليا",v2Text:"حفل الافتتاح، الجلسات، المعرض الوثائقي وحفل الاختتام. سيدي معروف، الدار البيضاء.",openMaps:"افتح في خرائط Google",
-    n1:"ترجمة فورية عربية–فرنسية خلال الجلسات.",n2:"الاختتام يوم الأحد على الساعة 13:00، يليه غداء أخوي على شرف المشاركين والضيوف.",n3:"الإقامة والوصول واعتماد الصحافة: راسلوا اللجنة المنظمة عبر واتساب.",
-    aerialCap:"الدار البيضاء، المدينة المضيفة · صورة Morocco Vibes",d1:"الورقة المفاهيمية",d1s:"9 صفحات",d2:"البرنامج المفصل",d2s:"5 صفحات · النسخة 15",d3:"بطاقة الدعوة",d3s:"وجهان",
+    hFri:"الجمعة 6",hSat:"السبت 7",hSun:"الأحد 8",qrCap:"امسح الرمز لفتح مسار الوصول",askAccess:"اطلب معلومات الوصول",
+    v2When:"الجمعة 6 والسبت 7 والأحد 8 نونبر",v2Name:"قاعة الحفلات كريستاليا",v2Text:"المكان الوحيد لأيام الندوة الثلاثة، بسيدي معروف، الدار البيضاء.",openMaps:"افتح في خرائط Google",
+    n1:"ترجمة فورية عربية–فرنسية خلال الجلسات.",n2:"اختتام الندوة يوم الأحد على الساعة 15:00، يليه غداء أخوي على شرف المشاركين والضيوف.",n3:"الإقامة والوصول واعتماد الصحافة: راسلوا اللجنة المنظمة عبر واتساب.",
+    aerialCap:"الدار البيضاء، المدينة المضيفة",d1:"الورقة المفاهيمية",d1s:"9 صفحات",d2:"البرنامج الرسمي",d2s:"10 صفحات · النسخة الإسبانية",d3:"بطاقة الدعوة",d3s:"وجهان",
     orgEyebrow:"الجهة المنظمة",orgP1:"جمعية دينية واجتماعية تابعة للاتحاد الوطني للسنغال، شعارها «نحن أنصار الله». ينظم فرعها بالمغرب هذه الندوة في الدار البيضاء.",
     orgP2:"يتولى المكتب، في ولايته من مارس 2025 إلى مارس 2028، تنسيق لجان المرأة والتواصل والتنظيم والثقافة.",recLabel:"وصل الإيداع",recDate:"بتاريخ 31 أكتوبر 1960",bureauCap:"المكتب · مارس 2025 – مارس 2028",zoom:"تكبير",close:"إغلاق",
     partEyebrow:"الشركاء",partTitle:"اجعلوا مؤسستكم شريكاً في الندوة",partText:"مؤسسات وجماعات ترابية ومقاولات ووسائل إعلام: سيُقدَّم الشركاء الرسميون هنا وخلال حفل الافتتاح يوم السبت 7 نونبر.",partCta:"كن شريكاً",
@@ -815,55 +825,74 @@ const DAYS = [
  { id:"ven", date:"2026-11-06",
    label:{fr:"Vendredi 6",en:"Friday 6",ar:"الجمعة 6"}, short:{fr:"Ven. 06 nov.",en:"Fri 06 Nov",ar:"الجمعة 06 نونبر"},
    theme:{fr:"Ouverture spirituelle",en:"Spiritual opening",ar:"الافتتاح الروحي"},
-   venue:{fr:"Centre Culturel Sidi Maarouf",en:"Sidi Maarouf Cultural Centre",ar:"المركز الثقافي سيدي معروف"},
-   hours:{fr:"Après l'Asr",en:"After Asr",ar:"بعد العصر"},
-   intro:{fr:"Assemblées d'exhortation et de guidance.",en:"Gatherings of exhortation and guidance.",ar:"مجالس الوعظ والإرشاد."},
+   venue:{fr:"Salle des fêtes Cristalia",en:"Cristalia reception hall",ar:"قاعة الحفلات كريستاليا"},
+   hours:{fr:"16:00 – 22:30",en:"4:00 – 10:30 pm",ar:"16:00 – 22:30"},
+   intro:{fr:"Ouverture spirituelle et assemblées d'exhortation et d'orientation. Wazifa et Hadara.",en:"Spiritual opening and gatherings of exhortation and guidance. Wazifa and Hadara.",ar:"الافتتاح الروحي ومجالس الوعظ والإرشاد. الوظيفة والحضرة."},
    slots:[
-    {time:{fr:"Après l'Asr",en:"After Asr",ar:"بعد العصر"}, start:"15:45", end:"18:30",
-     title:{fr:"Hayllala et séance de Dhikr",en:"Hayllala and Dhikr session",ar:"الهيللة ومجلس الذكر"},
-     text:{fr:"Accueil des Shuyoukh, des érudits et des délégations participantes.",en:"Welcome of the Shuyukh, scholars and participating delegations.",ar:"استقبال الشيوخ والعلماء والوفود المشاركة."}},
-    {time:{fr:"En soirée",en:"Evening",ar:"مساءً"}, start:"18:30", end:"23:30",
-     title:{fr:"Assemblées des Shuyoukh",en:"Gatherings of the Shuyukh",ar:"مجالس الشيوخ"},
-     text:{fr:"Souffles de foi et de spiritualité autour de l'héritage de Cheikh Ibrahim Niass, de son expérience de l'éducation spirituelle et de l'ancrage des valeurs de fraternité dans la foi.",en:"Reflections on the legacy of Cheikh Ibrahim Niass, his experience in spiritual education and the rooting of brotherhood in faith.",ar:"نفحات إيمانية وروحية حول إرث الشيخ إبراهيم انياس وتجربته في التربية الروحية وترسيخ قيم الأخوة في الإيمان."}}
+    {time:{fr:"16:00 – 17:39",en:"4:00 – 5:39 pm",ar:"16:00 – 17:39"}, start:"16:00", end:"17:39",
+     title:{fr:"Accueil des délégations",en:"Welcome of the delegations",ar:"استقبال الوفود"},
+     text:{fr:"Réception des Shuyoukh, des érudits et des délégations participantes.",en:"Welcome of the Shuyukh, scholars and participating delegations.",ar:"استقبال الشيوخ والعلماء والوفود المشاركة."}},
+    {pause:1,time:{fr:"17:39 – 18:00",en:"5:39 – 6:00 pm",ar:"17:39 – 18:00"}, start:"17:39", end:"18:00",
+     title:{fr:"Prière du Maghrib",en:"Maghrib prayer",ar:"صلاة المغرب"}},
+    {time:{fr:"18:00 – 19:30",en:"6:00 – 7:30 pm",ar:"18:00 – 19:30"}, start:"18:00", end:"19:30",
+     title:{fr:"Séance de Dhikr",en:"Dhikr session",ar:"مجلس الذكر"}},
+    {pause:1,time:{fr:"19:45 – 20:00",en:"7:45 – 8:00 pm",ar:"19:45 – 20:00"}, start:"19:30", end:"20:00",
+     title:{fr:"Prière de l'Isha",en:"Isha prayer",ar:"صلاة العشاء"}},
+    {time:{fr:"20:00 – 21:30",en:"8:00 – 9:30 pm",ar:"20:00 – 21:30"}, start:"20:00", end:"21:30",
+     title:{fr:"Causerie des Shuyoukh : exhortation et orientation",en:"Talk by the Shuyukh: exhortation and guidance",ar:"مجلس الشيوخ: الوعظ والإرشاد"},
+     text:{fr:"Souffles de foi et de spiritualité qui évoquent l'héritage de Cheikh Ibrahim Niass (qu'Allah l'agrée), son expérience de l'éducation spirituelle et l'ancrage des valeurs de fraternité dans la foi.",en:"Reflections on the legacy of Cheikh Ibrahim Niass (may God be pleased with him), his experience in spiritual education and the rooting of brotherhood in faith.",ar:"نفحات إيمانية وروحية تستحضر إرث الشيخ إبراهيم انياس رضي الله عنه، وتجربته في التربية الروحية، وترسيخ قيم الأخوة في الإيمان."}},
+    {pause:1,time:{fr:"21:30 – 22:30",en:"9:30 – 10:30 pm",ar:"21:30 – 22:30"}, start:"21:30", end:"22:30",
+     title:{fr:"Dîner",en:"Dinner",ar:"العشاء"}}
    ]},
  { id:"sam", date:"2026-11-07",
    label:{fr:"Samedi 7",en:"Saturday 7",ar:"السبت 7"}, short:{fr:"Sam. 07 nov.",en:"Sat 07 Nov",ar:"السبت 07 نونبر"},
    theme:{fr:"Ouverture officielle & Panel 1",en:"Official opening & Panel 1",ar:"الافتتاح الرسمي والجلسة الأولى"},
    venue:{fr:"Salle des fêtes Cristalia",en:"Cristalia reception hall",ar:"قاعة الحفلات كريستاليا"},
-   hours:{fr:"13 h – 21 h",en:"1–9 pm",ar:"13:00 – 21:00"},
-   intro:{fr:"Maroc et Sénégal : une histoire de liens scientifiques, diplomatiques, territoriaux et spirituels.",en:"Morocco and Senegal: a history of scholarly, diplomatic, territorial and spiritual ties.",ar:"المغرب والسنغال: تاريخ من الروابط العلمية والدبلوماسية والترابية والروحية."},
+   hours:{fr:"11:00 – 22:00",en:"11 am – 10 pm",ar:"11:00 – 22:00"},
+   intro:{fr:"Dhikr, cérémonie d'ouverture et Panel 1 : Maroc et Sénégal, une histoire de liens scientifiques, diplomatiques et spirituels.",en:"Dhikr, opening ceremony and Panel 1: Morocco and Senegal, a history of scholarly, diplomatic and spiritual ties.",ar:"الذكر، حفل الافتتاح والجلسة الأولى: المغرب والسنغال، تاريخ من الروابط العلمية والدبلوماسية والروحية."},
    slots:[
-    {time:{fr:"13:00 – 14:00",en:"1:00 – 2:00 pm",ar:"13:00 – 14:00"}, start:"13:00", end:"14:00",
+    {time:{fr:"11:00 – 12:30",en:"11:00 am – 12:30 pm",ar:"11:00 – 12:30"}, start:"11:00", end:"12:30",
+     title:{fr:"Dhikr",en:"Dhikr",ar:"الذكر"}},
+    {pause:1,time:{fr:"12:30 – 12:45",en:"12:30 – 12:45 pm",ar:"12:30 – 12:45"}, start:"12:30", end:"13:00",
+     title:{fr:"Prière du Dhuhr",en:"Dhuhr prayer",ar:"صلاة الظهر"}},
+    {time:{fr:"13:00 – 15:10",en:"1:00 – 3:10 pm",ar:"13:00 – 15:10"}, start:"13:00", end:"15:10",
      title:{fr:"Cérémonie d'ouverture officielle",en:"Official opening ceremony",ar:"حفل الافتتاح الرسمي"},
-     list:{fr:["Récitation de versets du Saint Coran","Mot de bienvenue de Jamhiyatou Ansaarud-Dîn – Groupement Maroc","Allocutions des autorités et institutions officielles, diplomatiques et religieuses","Hommage au Khalife Seydi Ali Al Hassan Cissé","Hommage à Cheikh Mouhamad Al Makki Ibrahim Niass","Leçon inaugurale d'Oustaz Babacar Niang"],
-           en:["Recitation from the Holy Quran","Welcome address by Jamhiyatou Ansaarud-Dîn – Morocco Chapter","Addresses by official, diplomatic and religious authorities","Tribute to Khalife Seydi Ali Al Hassan Cissé","Tribute to Cheikh Mouhamad Al Makki Ibrahim Niass","Inaugural lecture by Oustaz Babacar Niang"],
-           ar:["تلاوة آيات من الذكر الحكيم","كلمة ترحيبية باسم جمعية أنصار الدين – فرع المغرب","كلمات ممثلي السلطات والمؤسسات الرسمية والدبلوماسية والدينية","تكريم الخليفة سيدي علي الحسن سيسي","تكريم الشيخ محمد المكي إبراهيم انياس","الدرس الافتتاحي للأستاذ بابكر نيانغ"]}},
-    {time:{fr:"14:00 – 21:00",en:"2:00 – 9:00 pm",ar:"14:00 – 21:00"}, start:"14:00", end:"21:00",
+     list:{fr:["Récitation de versets du Saint Coran","Mot du Président au nom de Jamhiyatou Ansaarud-Dîn – Groupement Maroc","Allocutions des représentants des autorités et institutions officielles, diplomatiques et religieuses","Discours des partenaires","Hommage au Khalife Seydi Ali Al Hassan Cissé, avec un discours officiel au nom de sa famille","Hommage à Cheikh Mouhamad Al Makki Ibrahim Niass","Leçons inaugurales scientifiques et spirituelles, en préambule aux travaux du panel"],
+           en:["Recitation from the Holy Quran","Address by the President on behalf of Jamhiyatou Ansaarud-Dîn – Morocco Chapter","Addresses by representatives of official, diplomatic and religious authorities","Partners' addresses","Tribute to Khalife Seydi Ali Al Hassan Cissé, with an official address on behalf of his family","Tribute to Cheikh Mouhamad Al Makki Ibrahim Niass","Inaugural scholarly and spiritual lectures opening the panel"],
+           ar:["تلاوة آيات بينات من الذكر الحكيم","كلمة الرئيس باسم جمعية أنصار الدين – فرع المغرب","كلمات ممثلي السلطات والمؤسسات الرسمية والدبلوماسية والدينية","كلمات الشركاء","تكريم الخليفة سيدي علي الحسن سيسي، مع كلمة رسمية باسم أسرته","تكريم الشيخ محمد المكي إبراهيم انياس","دروس افتتاحية علمية وروحية تمهيداً لأشغال الجلسة"]}},
+    {pause:1,time:{fr:"15:10 – 16:00",en:"3:10 – 4:00 pm",ar:"15:10 – 16:00"}, start:"15:10", end:"16:00",
+     title:{fr:"Prière de l'Asr et pause cocktail",en:"Asr prayer and refreshment break",ar:"صلاة العصر واستراحة"}},
+    {time:{fr:"16:00 – 22:00",en:"4:00 – 10:00 pm",ar:"16:00 – 22:00"}, start:"16:00", end:"22:00",
      title:{fr:"Panel 1 · Maroc et Sénégal",en:"Panel 1 · Morocco and Senegal",ar:"الجلسة 1 · المغرب والسنغال"},
-     text:{fr:"Cinq axes de réflexion, sous direction académique.",en:"Five themes under academic chairmanship.",ar:"خمسة محاور تحت إشراف علمي."},
+     text:{fr:"Une histoire de liens scientifiques, diplomatiques et spirituels. Cinq axes, sous direction académique, avec interprétation simultanée arabe–français. Pauses : Maghrib 17:40 – 18:00, Isha 20:30 – 21:00, dîner 21:00 – 22:00. Clôture du panel à 22:00.",en:"A history of scholarly, diplomatic and spiritual ties. Five themes under academic chairmanship, with Arabic–French simultaneous interpretation. Breaks: Maghrib 5:40 – 6:00 pm, Isha 8:30 – 9:00 pm, dinner 9:00 – 10:00 pm. Panel closes at 10 pm.",ar:"تاريخ من الروابط العلمية والدبلوماسية والروحية. خمسة محاور تحت إشراف علمي، مع ترجمة فورية عربية–فرنسية. فترات التوقف: المغرب 17:40 – 18:00، العشاء (الصلاة) 20:30 – 21:00، وجبة العشاء 21:00 – 22:00. اختتام الجلسة على الساعة 22:00."},
      axes:"P1"},
     {time:{fr:"Toute la journée",en:"All day",ar:"طوال اليوم"},
-     title:{fr:"Exposition documentaire",en:"Documentary exhibition",ar:"معرض وثائقي"},
-     text:{fr:"Frise des étapes historiques du rapprochement maroco-sénégalais, et espace mémoriel dédié à Sayyida Rokhaya bint Cheikh Ibrahim Niass.",en:"Timeline of Moroccan–Senegalese milestones, and a memorial space dedicated to Sayyida Rokhaya bint Cheikh Ibrahim Niass.",ar:"خط زمني لمحطات التقارب المغربي السنغالي، وفضاء تذكاري للسيدة رقية بنت الشيخ إبراهيم انياس."},
+     title:{fr:"Exposition documentaire et espace mémoriel",en:"Documentary exhibition and memorial space",ar:"المعرض الوثائقي والفضاء التذكاري"},
+     text:{fr:"Frise chronologique des étapes du rapprochement maroco-sénégalais, et espace mémoriel dédié à Sayyida Rokhaya bint Cheikh Ibrahim Niass.",en:"Timeline of Moroccan–Senegalese milestones, and a memorial space dedicated to Sayyida Rokhaya bint Cheikh Ibrahim Niass.",ar:"خط زمني لمحطات التقارب المغربي السنغالي، وفضاء تذكاري للسيدة رقية بنت الشيخ إبراهيم انياس."},
      link:"#hommages"}
    ]},
  { id:"dim", date:"2026-11-08",
    label:{fr:"Dimanche 8",en:"Sunday 8",ar:"الأحد 8"}, short:{fr:"Dim. 08 nov.",en:"Sun 08 Nov",ar:"الأحد 08 نونبر"},
    theme:{fr:"Panel 2 & clôture",en:"Panel 2 & closing",ar:"الجلسة الثانية والاختتام"},
    venue:{fr:"Salle des fêtes Cristalia",en:"Cristalia reception hall",ar:"قاعة الحفلات كريستاليا"},
-   hours:{fr:"9 h – 13 h",en:"9 am – 1 pm",ar:"09:00 – 13:00"},
-   intro:{fr:"La diplomatie spirituelle au service de la paix et de la coopération internationale.",en:"Spiritual diplomacy for peace and international cooperation.",ar:"الدبلوماسية الروحية في خدمة السلام والتعاون الدولي."},
+   hours:{fr:"09:00 – 16:00",en:"9 am – 4 pm",ar:"09:00 – 16:00"},
+   intro:{fr:"Panel 2 : la diplomatie spirituelle au service de la paix et de la coopération internationale, puis cérémonie de clôture.",en:"Panel 2: spiritual diplomacy for peace and international cooperation, followed by the closing ceremony.",ar:"الجلسة الثانية: الدبلوماسية الروحية في خدمة السلام والتعاون الدولي، يليها حفل الاختتام."},
    slots:[
-    {time:{fr:"09:00 – 11:30",en:"9:00 – 11:30 am",ar:"09:00 – 11:30"}, start:"09:00", end:"11:30",
+    {pause:1,time:{fr:"09:00 – 10:00",en:"9:00 – 10:00 am",ar:"09:00 – 10:00"}, start:"09:00", end:"10:00",
+     title:{fr:"Petit-déjeuner",en:"Breakfast",ar:"الفطور"}},
+    {time:{fr:"10:00 – 11:00",en:"10:00 – 11:00 am",ar:"10:00 – 11:00"}, start:"10:00", end:"11:00",
+     title:{fr:"Dhikr",en:"Dhikr",ar:"الذكر"}},
+    {time:{fr:"11:00 – 14:30",en:"11:00 am – 2:30 pm",ar:"11:00 – 14:30"}, start:"11:00", end:"14:30",
      title:{fr:"Panel 2 · Diplomatie spirituelle",en:"Panel 2 · Spiritual diplomacy",ar:"الجلسة 2 · الدبلوماسية الروحية"},
-     text:{fr:"Trois axes de réflexion.",en:"Three themes.",ar:"ثلاثة محاور."}, axes:"P2"},
-    {time:{fr:"11:30 – 13:00",en:"11:30 am – 1:00 pm",ar:"11:30 – 13:00"}, start:"11:30", end:"13:00",
+     text:{fr:"Trois axes de réflexion, ponctués de séquences de Dhikr et de Madih. Début à 11:00, prière du Dhuhr et pause cocktail de 12:30 à 13:30, reprise de 13:30 à 14:30.",en:"Three themes, punctuated by Dhikr and Madih sequences. Starts at 11 am; Dhuhr prayer and break 12:30 – 1:30 pm; resumes 1:30 – 2:30 pm.",ar:"ثلاثة محاور تتخللها فقرات من الذكر والمديح. الانطلاق على الساعة 11:00، صلاة الظهر واستراحة من 12:30 إلى 13:30، ثم الاستئناف من 13:30 إلى 14:30."},
+     axes:"P2"},
+    {time:{fr:"14:30 – 15:00",en:"2:30 – 3:00 pm",ar:"14:30 – 15:00"}, start:"14:30", end:"15:00",
      title:{fr:"Cérémonie de clôture officielle",en:"Official closing ceremony",ar:"حفل الاختتام الرسمي"},
-     list:{fr:["Synthèse générale des travaux","Lecture et adoption des recommandations finales","Remise des certificats d'hommage aux personnalités honorées","Perspectives de coopération académique et culturelle","Mot de clôture et remerciements","Hommage à Mawlana Cheikh Ibrahim Niass","Prière finale (Duaa) pour le Commandeur des croyants et le Royaume du Maroc"],
-           en:["General summary of the proceedings","Reading and adoption of the final recommendations","Certificates of honour presented to the honoured figures","Outlook for academic and cultural cooperation","Closing words and thanks","Tribute to Mawlana Cheikh Ibrahim Niass","Closing prayer (Duaa) for the Commander of the Faithful and the Kingdom of Morocco"],
-           ar:["التقرير التركيبي العام للأشغال","قراءة التوصيات الختامية والمصادقة عليها","تسليم شهادات التكريم للشخصيات المكرَّمة","آفاق التعاون الأكاديمي والثقافي","الكلمة الختامية والشكر","تكريم خاص لمولانا الشيخ إبراهيم انياس","الدعاء الختامي لأمير المؤمنين وللمملكة المغربية حكومةً وشعباً"]}},
-    {time:{fr:"13:00",en:"1:00 pm",ar:"13:00"}, start:"13:00", end:"15:00",
-     title:{fr:"Déjeuner fraternel",en:"Fraternal lunch",ar:"غداء أخوي"},
+     list:{fr:["Synthèse générale des travaux du colloque","Lecture et adoption des recommandations finales","Remise des certificats d'hommage aux personnalités honorées","Perspectives de coopération académique et culturelle","Discours de clôture du Cheikh Abdoul Malick Niass et remerciements aux participants et aux partenaires","Hommage à Mawlana Cheikh Ibrahim Niass (qu'Allah l'agrée)","Prière finale (Duaa) pour le Commandeur des croyants et le Royaume du Maroc, son gouvernement et son peuple"],
+           en:["General summary of the proceedings","Reading and adoption of the final recommendations","Certificates of honour presented to the honoured figures","Outlook for academic and cultural cooperation","Closing address by Cheikh Abdoul Malick Niass and thanks to participants and partners","Tribute to Mawlana Cheikh Ibrahim Niass (may God be pleased with him)","Closing prayer (Duaa) for the Commander of the Faithful and the Kingdom of Morocco, its government and people"],
+           ar:["التقرير التركيبي العام لأشغال الندوة","قراءة التوصيات الختامية والمصادقة عليها","تسليم شهادات التكريم للشخصيات المكرَّمة","آفاق التعاون الأكاديمي والثقافي","الكلمة الختامية للشيخ عبد المالك انياس وشكر المشاركين والشركاء","تكريم خاص لمولانا الشيخ إبراهيم انياس رضي الله عنه","الدعاء الختامي لأمير المؤمنين وللمملكة المغربية حكومةً وشعباً"]}},
+    {pause:1,time:{fr:"15:00 – 16:00",en:"3:00 – 4:00 pm",ar:"15:00 – 16:00"}, start:"15:00", end:"16:00",
+     title:{fr:"Clôture du colloque · Déjeuner fraternel",en:"End of the colloquium · Fraternal lunch",ar:"اختتام الندوة · غداء أخوي"},
      text:{fr:"En l'honneur des participants et des invités.",en:"In honour of participants and guests.",ar:"على شرف المشاركين والضيوف."}}
    ]}
 ];
@@ -894,9 +923,9 @@ const AXES = {
   {n:2,t:{fr:"Cheikh Ibrahim Niass et le Maroc",en:"Cheikh Ibrahim Niass and Morocco",ar:"الشيخ إبراهيم انياس والمغرب"},
    p:{fr:"Ses liens avec le Maroc, ses contributions aux Dourouss Hassaniya et son rayonnement dans le monde islamique.",en:"His ties with Morocco, his contributions to the Hassaniya Lectures and his influence across the Islamic world.",ar:"صلاته بالمغرب، ومساهماته في الدروس الحسنية، وإشعاعه في العالم الإسلامي."}},
   {n:3,t:{fr:"Relations bilatérales et dimension territoriale",en:"Bilateral relations and the territorial dimension",ar:"العلاقات الثنائية والبعد الترابي"},
-   p:{fr:"Cadres institutionnels, coopération politique, culturelle et économique ; jumelages et coopération décentralisée entre villes et collectivités.",en:"Institutional frameworks; political, cultural and economic cooperation; twinning and decentralised cooperation between cities.",ar:"الأطر المؤسساتية، التعاون السياسي والثقافي والاقتصادي، التوأمة والتعاون اللامركزي بين المدن والجماعات."}},
+   p:{fr:"Histoire des liens et de leurs cadres institutionnels ; coopération politique, culturelle et économique ; rôle stratégique des États ; jumelages et coopération décentralisée entre villes et collectivités.",en:"Institutional frameworks; political, cultural and economic cooperation; twinning and decentralised cooperation between cities.",ar:"الأطر المؤسساتية، التعاون السياسي والثقافي والاقتصادي، التوأمة والتعاون اللامركزي بين المدن والجماعات."}},
   {n:4,t:{fr:"Foyers spirituels et scientifiques du Sénégal",en:"Spiritual and scholarly centres of Senegal",ar:"البيوتات الروحية والعلمية في السنغال"},
-   p:{fr:"Interactions avec le Maroc ; transmission des savoirs ; apport d'Oustaz Ibrahima Mahmoud Diop (Barham) ; mise en lumière de Serigne Abbas Sall de Louga.",en:"Interactions with Morocco; transmission of knowledge; the contribution of Oustaz Ibrahima Mahmoud Diop (Barham); spotlight on Serigne Abbas Sall of Louga.",ar:"التفاعل مع المغرب، نقل المعارف، إسهام الأستاذ إبراهيم محمود ديوب (برهام)، وتسليط الضوء على سرين عباس صال من لوغا."}},
+   p:{fr:"Interactions historiques et contemporaines avec le Maroc ; contributions d'Oustaz Barham Diop, Serigne Mawdo Sy Abdou, Serigne Mamoune Mbacké, Serigne Abdoul Aziz Sy Al Amine, Serigne Mansour Sy Abdou, Cheikh Tidiane Diallo, Dr Rawane Mbaye et Dr Ousmane Kane ; transmission des savoirs ; mention spéciale : Serigne Abbas Sall de Louga.",en:"Historic and contemporary interactions with Morocco; contributions of Oustaz Barham Diop, Serigne Mawdo Sy Abdou, Serigne Mamoune Mbacké, Serigne Abdoul Aziz Sy Al Amine, Serigne Mansour Sy Abdou, Cheikh Tidiane Diallo, Dr Rawane Mbaye and Dr Ousmane Kane; transmission of knowledge; special mention: Serigne Abbas Sall of Louga.",ar:"التفاعل مع المغرب، نقل المعارف، إسهام الأستاذ إبراهيم محمود ديوب (برهام)، وتسليط الضوء على سرين عباس صال من لوغا."}},
   {n:5,t:{fr:"Communication scientifique et transmission du savoir",en:"Scholarly exchange and the transmission of knowledge",ar:"التواصل العلمي ونقل المعرفة"},
    p:{fr:"Parcours des étudiants et savants formés au Maroc et au Sénégal ; rôle des institutions éducatives.",en:"Students and scholars trained in Morocco and Senegal; the role of educational institutions.",ar:"مسارات الطلبة والعلماء الذين تكوّنوا في المغرب والسنغال، ودور المؤسسات التعليمية."}}
  ],
@@ -932,10 +961,11 @@ const CONTACTS = [
  {type:"wa", v:"+212 645-570124", raw:"212645570124"},
  {type:"wa", v:"+212 631-331784", raw:"212631331784"},
  {type:"wa", v:"+212 629-121354", raw:"212629121354"},
+ {type:"wa", v:"+221 77 207 80 39", raw:"221772078039"},
  {type:"mail", v:"contact@ansaar-ma.com"}
 ];
-const START = new Date("2026-11-06T15:45:00+01:00");
-const END = new Date("2026-11-08T13:00:00+01:00");
+const START = new Date("2026-11-06T16:00:00+01:00");
+const END = new Date("2026-11-08T16:00:00+01:00");
 const SITE = "https://colloque.ansaar-ma.com/";
 
 /* ===================== Utilitaires ===================== */
@@ -986,11 +1016,11 @@ function renderDay(){
         <div class="hours">${esc(L(d.hours))}</div>
         <div class="venue"><b>${esc(L(d.venue))}</b><span>${esc(t("place"))}</span></div>
         <p>${esc(L(d.intro))}</p>
-        ${d.id!=="ven"?`<a class="btn btn-line" href="https://maps.app.goo.gl/rKhbDGGFphEzyyer8" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span>${esc(t("dockMap"))}</span></a>`:""}
+        ${true?`<a class="btn btn-line" href="https://maps.app.goo.gl/rKhbDGGFphEzyyer8" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span>${esc(t("dockMap"))}</span></a>`:""}
       </aside>
       <ol class="timeline">${d.slots.map(s=>{
         const live = isToday && s.start && hm>=s.start && hm<s.end;
-        return `<li class="slot${live?" now":""}">
+        return `<li class="slot${live?" now":""}${s.pause?" pause":""}">
           <time>${esc(L(s.time))}</time>
           <div>
             ${live?`<span class="now-tag">${esc(t("now"))}</span>`:""}
@@ -1054,24 +1084,28 @@ function updateLinks(){
   $("#shareWa").href = "https://wa.me/?text="+encodeURIComponent(share);
   const partMsg = lang==="ar"?"السلام عليكم، نرغب في الشراكة مع الندوة الدولية بالدار البيضاء.":lang==="en"?"Hello, we would like to partner with the Casablanca colloquium.":"Assalamou alaykoum, nous souhaitons devenir partenaire du colloque de Casablanca.";
   $("#partWa").href = "https://wa.me/212645570124?text="+encodeURIComponent(partMsg);
-  const accMsg = lang==="ar"?"السلام عليكم، أرجو تزويدي بمعلومات الوصول إلى المركز الثقافي سيدي معروف (الجمعة 6 نونبر).":lang==="en"?"Hello, could you send me directions to the Sidi Maarouf Cultural Centre (Friday 6 Nov)?":"Assalamou alaykoum, pouvez-vous m'indiquer l'accès au Centre Culturel Sidi Maarouf (vendredi 6 novembre) ?";
+  const accMsg = lang==="ar"?"السلام عليكم، أرجو تزويدي بمعلومات الوصول إلى قاعة الحفلات كريستاليا بسيدي معروف.":lang==="en"?"Hello, could you send me directions to the Cristalia reception hall in Sidi Maarouf?":"Assalamou alaykoum, pouvez-vous m'indiquer l'accès à la Salle des fêtes Cristalia à Sidi Maarouf ?";
   $("#v1Wa").href = "https://wa.me/212645570124?text="+encodeURIComponent(accMsg);
   const calTitle = lang==="ar"?"ندوة التصوف والسلام وحوار الحضارات":lang==="en"?"Colloquium: Sufism, Peace and the Dialogue of Civilisations":"Colloque : Le Soufisme, la Paix et le Dialogue des Civilisations";
-  $("#calLink").href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(calTitle)+"&dates=20261106T144500Z/20261108T120000Z&ctz=Africa/Casablanca&location="+encodeURIComponent("Salle des fêtes Cristalia, Sidi Maarouf, Casablanca")+"&details="+encodeURIComponent("Ven. 6 : Centre Culturel Sidi Maarouf (après l'Asr)\nSam. 7 : Salle Cristalia, 13h–21h\nDim. 8 : Salle Cristalia, 9h–13h\n"+SITE);
+  $("#calLink").href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(calTitle)+"&dates=20261106T150000Z/20261108T150000Z&ctz=Africa/Casablanca&location="+encodeURIComponent("Salle des fêtes Cristalia, Sidi Maarouf, Casablanca")+"&details="+encodeURIComponent("Salle des fêtes Cristalia, Sidi Maarouf\nVen. 6 : 16h–22h30\nSam. 7 : 11h–22h\nDim. 8 : 9h–16h\n"+SITE);
 }
 
 /* ===================== Compte à rebours ===================== */
 function tick(){
   const now = new Date();
   const units=$("#cdUnits"), lbl=$("#cdLabel");
+  const setLabel=(value,live=false)=>{
+    if(lbl.textContent.trim()===value && Boolean(lbl.querySelector(".live-dot"))===live) return;
+    lbl.innerHTML=live?`<span class="live-dot" aria-hidden="true"></span> ${esc(value)}`:esc(value);
+  };
   if(now < START){
     let s = Math.max(0, Math.floor((START-now)/1000));
     const d=Math.floor(s/86400); s%=86400; const h=Math.floor(s/3600); s%=3600; const m=Math.floor(s/60); s%=60;
     $("#cdD").textContent=String(d); $("#cdH").textContent=String(h).padStart(2,"0"); $("#cdM").textContent=String(m).padStart(2,"0"); $("#cdS").textContent=String(s).padStart(2,"0");
-    units.hidden=false; lbl.textContent=t("cdBefore");
+    units.hidden=false; setLabel(t("cdBefore"));
   } else if(now < END){
-    units.hidden=true; lbl.innerHTML=`<span class="live-dot"></span> ${esc(t("cdLive"))}`;
-  } else { units.hidden=true; lbl.textContent=t("cdDone"); }
+    units.hidden=true; setLabel(t("cdLive"),true);
+  } else { units.hidden=true; setLabel(t("cdDone")); }
 }
 
 /* ===================== Événements ===================== */
