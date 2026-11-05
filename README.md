@@ -26,3 +26,4 @@ python3 -m http.server 8765 --bind 127.0.0.1
   du Cheikh Abdoul Malick Niass).
 - Nouvel organigramme du bureau Ansaarud-Dîn Maroc (mars 2025 – mars 2028).
 - QR code de la Salle Cristalia agrandi et net, pour un scan facile.
+- Programme officiel en français (PDF, 10 pages) dans `docs/`.
