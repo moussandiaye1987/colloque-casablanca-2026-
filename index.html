@@ -344,7 +344,7 @@ img{max-width:100%;height:auto;display:block}
 .notes div > *{min-width:0}
 .notes svg{width:20px;height:20px;color:var(--gold);margin-top:3px}
 @media (max-width:860px){.infos{grid-template-columns:1fr}.side figure img{aspect-ratio:16/10}}
-.docs{display:grid;grid-template-columns:minmax(0,420px);gap:14px;margin-top:clamp(28px,4vw,44px)}
+.docs{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:14px;margin-top:clamp(28px,4vw,44px)}
 .doc{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);text-decoration:none;transition:border-color .2s,transform .2s}
 .doc > *{min-width:0}
 .doc:hover{border-color:var(--gold);transform:translateY(-2px)}
@@ -637,6 +637,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
         </aside>
       </div>
       <div class="docs">
+        <a class="doc" id="noteLink" href="docs/note-conceptuelle-colloque-2026-fr.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d1">Note conceptuelle</b><span data-i18n="d1s">9 pages</span></span></a>
         <a class="doc" href="docs/programme-officiel-colloque-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d2">Programme officiel</b><span data-i18n="d2s">10 pages</span></span></a>
       </div>
     </div>
@@ -769,7 +770,7 @@ const T = {
     askAccess:"Ask for directions",hFri:"Friday 6",hSat:"Saturday 7",hSun:"Sunday 8",qrCap:"Scan to open directions",
     v2When:"Friday 6, Saturday 7 and Sunday 8 November",v2Name:"Cristalia reception hall",v2Text:"The single venue for all three days of the colloquium, in Sidi Maarouf, Casablanca.",openMaps:"Open in Google Maps",
     n1:"Arabic–French simultaneous translation during the panels.",n2:"The colloquium closes on Sunday at 3 pm, followed by a fraternal lunch for participants and guests.",n3:"Accommodation, access and press accreditation: message the organisers on WhatsApp.",
-    aerialCap:"Casablanca, host city",d1:"Concept note",d1s:"9 pages",d2:"Official programme",d2s:"10 pages · in French",d3:"Invitation card",d3s:"Two-sided",
+    aerialCap:"Casablanca, host city",d1:"Concept note",d1s:"9 pages · English",d2:"Official programme",d2s:"10 pages · in French",d3:"Invitation card",d3s:"Two-sided",
     orgEyebrow:"The organiser",orgP1:"A religious and social association affiliated with the National Federation of Senegal, Jamhiyatou Ansaarud-Dîn carries the motto “Nahnu Ansaarullâh”. Its Morocco Chapter organises this colloquium in Casablanca.",
     orgP2:"The board serving from March 2025 to March 2028 coordinates the women's, communication, organisation and cultural committees.",recLabel:"Registration",recDate:"of 31 October 1960",bureauCap:"Board · March 2025 – March 2028",zoom:"Enlarge",close:"Close",
     partEyebrow:"Partners",partTitle:"Associate your institution with the colloquium",partText:"Institutions, local authorities, businesses and media: official partners will be presented here and at the opening ceremony on Saturday 7 November.",partCta:"Become a partner",
@@ -804,7 +805,7 @@ const T = {
     hFri:"الجمعة 6",hSat:"السبت 7",hSun:"الأحد 8",qrCap:"امسح الرمز لفتح مسار الوصول",askAccess:"اطلب معلومات الوصول",
     v2When:"الجمعة 6 والسبت 7 والأحد 8 نونبر",v2Name:"قاعة الحفلات كريستاليا",v2Text:"المكان الوحيد لأيام الملتقى الثلاثة، بسيدي معروف، الدار البيضاء.",openMaps:"افتح في خرائط Google",
     n1:"ترجمة فورية عربية–فرنسية خلال الجلسات.",n2:"اختتام الملتقى يوم الأحد على الساعة 15:00، يليه غداء أخوي على شرف المشاركين والضيوف.",n3:"الإقامة والوصول واعتماد الصحافة: راسلوا اللجنة المنظمة عبر واتساب.",
-    aerialCap:"الدار البيضاء، المدينة المضيفة",d1:"الورقة المفاهيمية",d1s:"9 صفحات",d2:"البرنامج الرسمي",d2s:"10 صفحات · بالفرنسية",d3:"بطاقة الدعوة",d3s:"وجهان",
+    aerialCap:"الدار البيضاء، المدينة المضيفة",d1:"الورقة المفاهيمية",d1s:"9 صفحات · بالعربية",d2:"البرنامج الرسمي",d2s:"10 صفحات · بالفرنسية",d3:"بطاقة الدعوة",d3s:"وجهان",
     orgEyebrow:"الجهة المنظمة",orgP1:"جمعية دينية واجتماعية تابعة للاتحاد الوطني للسنغال، شعارها «نحن أنصار الله». تنظم مجموعتها بالمغرب هذا الملتقى في الدار البيضاء.",
     orgP2:"يتولى المكتب، في ولايته من مارس 2025 إلى مارس 2028، تنسيق لجان المرأة والتواصل والتنظيم والثقافة.",recLabel:"وصل الإيداع",recDate:"بتاريخ 31 أكتوبر 1960",bureauCap:"المكتب · مارس 2025 – مارس 2028",zoom:"تكبير",close:"إغلاق",
     partEyebrow:"الشركاء",partTitle:"اجعلوا مؤسستكم شريكاً في الملتقى",partText:"مؤسسات وجماعات ترابية ومقاولات ووسائل إعلام: سيُقدَّم الشركاء الرسميون هنا وخلال حفل الافتتاح يوم السبت 7 نونبر.",partCta:"كن شريكاً",
@@ -1080,6 +1081,7 @@ function updateLinks(){
   const body = `${lang==="ar"?"السلام عليكم،":"Assalamou alaykoum,"}\n\n${msg}\n\n— ${name}\n(${topic} · Colloque Casablanca 2026)`;
   $("#sendWa").href = "https://wa.me/212645570124?text="+encodeURIComponent(body);
   $("#sendMail").href = "mailto:contact@ansaar-ma.com?subject="+encodeURIComponent("Colloque Casablanca 2026 — "+topic)+"&body="+encodeURIComponent(body);
+  $("#noteLink").href = "docs/note-conceptuelle-colloque-2026-"+(lang==="ar"?"ar":lang==="en"?"en":"fr")+".pdf";
   const share = (lang==="ar" ? "الملتقى الدولي «التصوف والسلام وحوار الحضارات» · الدار البيضاء، 6–8 نونبر 2026" : lang==="en" ? "International colloquium “Sufism, Peace and the Dialogue of Civilisations” · Casablanca, 6–8 Nov 2026" : "Colloque international « Le Soufisme, la Paix et le Dialogue des Civilisations » · Casablanca, 6–8 nov. 2026") + "\n" + SITE;
   $("#shareWa").href = "https://wa.me/?text="+encodeURIComponent(share);
   const partMsg = lang==="ar"?"السلام عليكم، نرغب في الشراكة مع الملتقى الدولي بالدار البيضاء.":lang==="en"?"Hello, we would like to partner with the Casablanca colloquium.":"Assalamou alaykoum, nous souhaitons devenir partenaire du colloque de Casablanca.";

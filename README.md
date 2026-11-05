@@ -33,3 +33,9 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - Version arabe en écriture naskh (Amiri pour les titres, Noto Naskh Arabic pour le texte),
   comme le programme officiel arabe, avec sa terminologie : « الملتقى الدولي », « مجموعة المغرب ».
 - Retrait de la note conceptuelle et de la carte d'invitation ; seul le programme officiel reste à télécharger.
+
+## Version 6 (5 novembre 2026)
+
+- Note conceptuelle de retour sur le site, en trois langues : le lien ouvre la version
+  correspondant à la langue choisie (`docs/note-conceptuelle-colloque-2026-fr.pdf`, `-en.pdf`, `-ar.pdf`).
+- Versions anglaise et arabe traduites depuis la note française, dans la même mise en page (9 pages).
