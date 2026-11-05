@@ -27,3 +27,9 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - Nouvel organigramme du bureau Ansaarud-Dîn Maroc (mars 2025 – mars 2028).
 - QR code de la Salle Cristalia agrandi et net, pour un scan facile.
 - Programme officiel en français (PDF, 10 pages) dans `docs/`.
+
+## Version 5 (5 novembre 2026)
+
+- Version arabe en écriture naskh (Amiri pour les titres, Noto Naskh Arabic pour le texte),
+  comme le programme officiel arabe, avec sa terminologie : « الملتقى الدولي », « مجموعة المغرب ».
+- Retrait de la note conceptuelle et de la carte d'invitation ; seul le programme officiel reste à télécharger.

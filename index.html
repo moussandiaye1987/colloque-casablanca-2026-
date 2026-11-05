@@ -17,7 +17,7 @@
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Cairo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Noto+Kufi+Arabic:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap">
 <style>
 /* Layout : héros photo plein cadre (crépuscule sur Casablanca) → bandes alternées ivoire / vert profond,
    motif khatam (étoile à huit branches du zellige) en filigrane, programme en onglets par jour. */
@@ -44,8 +44,8 @@
   --f-display:"Bricolage Grotesque", "Inter", sans-serif;
   --f-body:"Inter", "Segoe UI", system-ui, sans-serif;
   --f-quote:"Lora", Georgia, serif;
-  --f-ar-display:"Noto Kufi Arabic", "Cairo", sans-serif;
-  --f-ar-body:"Cairo", "Segoe UI", Tahoma, sans-serif;
+  --f-ar-display:"Amiri", "Noto Naskh Arabic", "Traditional Arabic", serif;
+  --f-ar-body:"Noto Naskh Arabic", "Amiri", "Traditional Arabic", serif;
 
   --step--1:clamp(.82rem,.8rem + .1vw,.88rem);
   --step-0:clamp(1rem,.97rem + .15vw,1.08rem);
@@ -73,7 +73,7 @@ body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:va
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--dark-band)}
 [dir="rtl"] body{font-family:var(--f-ar-body);line-height:1.8}
 h1,h2,h3,h4{font-family:var(--f-display);font-weight:600;line-height:1.1;text-wrap:balance;margin:0}
-[dir="rtl"] :is(h1,h2,h3,h4){font-family:var(--f-ar-display);font-weight:600;line-height:1.45}
+[dir="rtl"] :is(h1,h2,h3,h4){font-family:var(--f-ar-display);font-weight:700;line-height:1.5}
 p{margin:0}
 a{color:inherit}
 img{max-width:100%;height:auto;display:block}
@@ -344,7 +344,7 @@ img{max-width:100%;height:auto;display:block}
 .notes div > *{min-width:0}
 .notes svg{width:20px;height:20px;color:var(--gold);margin-top:3px}
 @media (max-width:860px){.infos{grid-template-columns:1fr}.side figure img{aspect-ratio:16/10}}
-.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:clamp(28px,4vw,44px)}
+.docs{display:grid;grid-template-columns:minmax(0,420px);gap:14px;margin-top:clamp(28px,4vw,44px)}
 .doc{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);text-decoration:none;transition:border-color .2s,transform .2s}
 .doc > *{min-width:0}
 .doc:hover{border-color:var(--gold);transform:translateY(-2px)}
@@ -637,9 +637,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
         </aside>
       </div>
       <div class="docs">
-        <a class="doc" href="https://colloque.ansaar-ma.com/assets/note-conceptuelle-colloque-casablanca-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d1">Note conceptuelle</b><span data-i18n="d1s">9 pages</span></span></a>
         <a class="doc" href="docs/programme-officiel-colloque-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d2">Programme officiel</b><span data-i18n="d2s">10 pages</span></span></a>
-        <a class="doc" href="https://colloque.ansaar-ma.com/assets/carte-invitation-colloque-casablanca-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d3">Carte d'invitation</b><span data-i18n="d3s">Recto-verso</span></span></a>
       </div>
     </div>
   </section>
@@ -715,7 +713,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
   <div class="wrap">
     <img src="img/logo-ansaar.webp" alt="Emblème de Jamhiyatou Ansaarud-Dîn" width="64" height="64" loading="lazy">
     <div>
-      <p class="ar" lang="ar" dir="rtl">جمعية أنصار الدين · فرع المغرب</p>
+      <p class="ar" lang="ar" dir="rtl">جمعية أنصار الدين · مجموعة المغرب</p>
       <p data-i18n="footLine">Jamhiyatou Ansaarud-Dîn · Groupement Maroc — Le Soufisme, la Paix et le Dialogue des Civilisations · Casablanca, 6–8 novembre 2026</p>
       <p>© 2026</p>
     </div>
@@ -782,19 +780,19 @@ const T = {
     copied:"Copied",copy:"Copy",email:"Email",waLabel:"WhatsApp",fillName:"Add your name and message first."
   },
   ar:{
-    brandSub:"فرع المغرب",navAbout:"الندوة",navProg:"البرنامج",navSpk:"المتدخلون",navInfo:"معلومات عملية",navContact:"اتصل بنا",
-    edition:"الدورة الثانية",intl:"ندوة دولية",
+    brandSub:"مجموعة المغرب",navAbout:"الملتقى",navProg:"البرنامج",navSpk:"المتدخلون",navInfo:"معلومات عملية",navContact:"اتصل بنا",
+    edition:"الدورة الثانية",intl:"ملتقى دولي",
     heroTitle:"التصوف و<em>السلام</em> وحوار الحضارات",
     heroLead:"الدبلوماسية الروحية والعلاقات الثنائية: دور الدول والزعماء الدينيين في تعزيز التقارب بين المغرب والسنغال.",
     fri:"الجمعة",sat:"السبت",sun:"الأحد",nov2026:"نونبر 2026",place:"سيدي معروف · الدار البيضاء",
-    cdBefore:"الافتتاح بعد",cdLive:"الندوة جارية الآن",cdDone:"شكراً لحضوركم",days:"يوم",hours:"ساعة",mins:"دقيقة",secs:"ثانية",
+    cdBefore:"الافتتاح بعد",cdLive:"الملتقى جارٍ الآن",cdDone:"شكراً لحضوركم",days:"يوم",hours:"ساعة",mins:"دقيقة",secs:"ثانية",
     ctaProg:"اطّلع على البرنامج",ctaMap:"الطريق إلى قاعة كريستاليا",credit:"مسجد الحسن الثاني، الدار البيضاء",
     fDays:"أيام من اللقاءات",fPanels:"جلستان علميتان",fAxes:"محاور للنقاش",fSpk:"متدخلاً",fTrad:"ترجمة فورية",
-    aboutEyebrow:"الندوة",aboutTitle:"جسر روحي بين أمّتين",
+    aboutEyebrow:"الملتقى",aboutTitle:"جسر روحي بين أمّتين",
     aboutP1:"من 6 إلى 8 نونبر 2026، يلتقي العلماء والشيوخ والباحثون والمسؤولون المؤسساتيون والترابيون في الدار البيضاء لبحث كيف تُرسّخ الدبلوماسية الروحية التقارب بين المملكة المغربية وجمهورية السنغال وتخدم السلام.",
-    aboutP2:"بعد اليوم التأبيني ليوم 8 نونبر 2025 المخصص لشيخ الإسلام الحاج إبراهيم انياس، تتحول هذه الدورة الثانية إلى ندوة دولية على مدى ثلاثة أيام: جلستان علميتان، ومعرض وثائقي، وفقرات للذكر والمديح، وترجمة فورية عربية–فرنسية.",
+    aboutP2:"بعد اليوم التأبيني ليوم 8 نونبر 2025 المخصص لشيخ الإسلام الحاج إبراهيم انياس، تتحول هذه الدورة الثانية إلى ملتقى دولي على مدى ثلاثة أيام: جلستان علميتان، ومعرض وثائقي، وفقرات للذكر والمديح، وترجمة فورية عربية–فرنسية.",
     qLabel:"الإشكالية المركزية",qText:"كيف يمكن للدول والزعماء الدينيين والمسؤولين الترابيين، استناداً إلى التصوف وشبكاته، تعزيز التقارب بين المغرب والسنغال والإسهام في السلام؟",
-    progEyebrow:"البرنامج",progTitle:"ثلاثة أيام، ثلاث محطات",progLead:"اضغط على محور لعرض مواضيعه والمتدخلين فيه. يُحدَّث البرنامج مباشرة خلال الندوة.",
+    progEyebrow:"البرنامج",progTitle:"ثلاثة أيام، ثلاث محطات",progLead:"اضغط على محور لعرض مواضيعه والمتدخلين فيه. يُحدَّث البرنامج مباشرة خلال الملتقى.",
     progNote:"تتخلل المداخلاتِ فقراتٌ ثقافية وروحية من الذكر والمديح. ترجمة فورية عربية–فرنسية.",
     dlProg:"البرنامج الرسمي · PDF",addCal:"أضف إلى مفكرتي",today:"اليوم",now:"الآن",
     spkEyebrow:"المتدخلون",spkTitle:"خمسة عشر صوتاً من المغرب والسنغال ونيجيريا",spkLead:"علماء وباحثون ودبلوماسيون ومرشدون روحيون. عناوين المداخلات مذكورة بصيغتها الفرنسية.",
@@ -804,16 +802,16 @@ const T = {
     memTitle:"فضاء تذكاري · السيدة رقية بنت الشيخ إبراهيم انياس",memText:"فضاء مخصص لجهودها الروحية والتربوية ودورها في نقل إرث مولانا الشيخ إبراهيم انياس وصونه والحفاظ عليه.",
     infoEyebrow:"معلومات عملية",infoTitle:"استعدّ لحضورك",
     hFri:"الجمعة 6",hSat:"السبت 7",hSun:"الأحد 8",qrCap:"امسح الرمز لفتح مسار الوصول",askAccess:"اطلب معلومات الوصول",
-    v2When:"الجمعة 6 والسبت 7 والأحد 8 نونبر",v2Name:"قاعة الحفلات كريستاليا",v2Text:"المكان الوحيد لأيام الندوة الثلاثة، بسيدي معروف، الدار البيضاء.",openMaps:"افتح في خرائط Google",
-    n1:"ترجمة فورية عربية–فرنسية خلال الجلسات.",n2:"اختتام الندوة يوم الأحد على الساعة 15:00، يليه غداء أخوي على شرف المشاركين والضيوف.",n3:"الإقامة والوصول واعتماد الصحافة: راسلوا اللجنة المنظمة عبر واتساب.",
+    v2When:"الجمعة 6 والسبت 7 والأحد 8 نونبر",v2Name:"قاعة الحفلات كريستاليا",v2Text:"المكان الوحيد لأيام الملتقى الثلاثة، بسيدي معروف، الدار البيضاء.",openMaps:"افتح في خرائط Google",
+    n1:"ترجمة فورية عربية–فرنسية خلال الجلسات.",n2:"اختتام الملتقى يوم الأحد على الساعة 15:00، يليه غداء أخوي على شرف المشاركين والضيوف.",n3:"الإقامة والوصول واعتماد الصحافة: راسلوا اللجنة المنظمة عبر واتساب.",
     aerialCap:"الدار البيضاء، المدينة المضيفة",d1:"الورقة المفاهيمية",d1s:"9 صفحات",d2:"البرنامج الرسمي",d2s:"10 صفحات · بالفرنسية",d3:"بطاقة الدعوة",d3s:"وجهان",
-    orgEyebrow:"الجهة المنظمة",orgP1:"جمعية دينية واجتماعية تابعة للاتحاد الوطني للسنغال، شعارها «نحن أنصار الله». ينظم فرعها بالمغرب هذه الندوة في الدار البيضاء.",
+    orgEyebrow:"الجهة المنظمة",orgP1:"جمعية دينية واجتماعية تابعة للاتحاد الوطني للسنغال، شعارها «نحن أنصار الله». تنظم مجموعتها بالمغرب هذا الملتقى في الدار البيضاء.",
     orgP2:"يتولى المكتب، في ولايته من مارس 2025 إلى مارس 2028، تنسيق لجان المرأة والتواصل والتنظيم والثقافة.",recLabel:"وصل الإيداع",recDate:"بتاريخ 31 أكتوبر 1960",bureauCap:"المكتب · مارس 2025 – مارس 2028",zoom:"تكبير",close:"إغلاق",
-    partEyebrow:"الشركاء",partTitle:"اجعلوا مؤسستكم شريكاً في الندوة",partText:"مؤسسات وجماعات ترابية ومقاولات ووسائل إعلام: سيُقدَّم الشركاء الرسميون هنا وخلال حفل الافتتاح يوم السبت 7 نونبر.",partCta:"كن شريكاً",
+    partEyebrow:"الشركاء",partTitle:"اجعلوا مؤسستكم شريكاً في الملتقى",partText:"مؤسسات وجماعات ترابية ومقاولات ووسائل إعلام: سيُقدَّم الشركاء الرسميون هنا وخلال حفل الافتتاح يوم السبت 7 نونبر.",partCta:"كن شريكاً",
     ctEyebrow:"اتصل بنا",ctTitle:"تواصل مع اللجنة المنظمة",ctLead:"التسجيل، الوفود، الصحافة، الإقامة: تجيب اللجنة بالأولوية عبر واتساب.",
     fName:"الاسم",fTopic:"الموضوع",fMsg:"الرسالة",t1:"التسجيل / المشاركة",t2:"وفد",t3:"الصحافة والإعلام",t4:"شراكة",t5:"سؤال آخر",
     sendWa:"أرسل عبر واتساب",sendMail:"عبر البريد الإلكتروني",formHint:"تُفتح رسالتك محرّرة مسبقاً في واتساب أو بريدك: لم يبقَ إلا إرسالها.",
-    footLine:"جمعية أنصار الدين · فرع المغرب — التصوف والسلام وحوار الحضارات · الدار البيضاء، 6–8 نونبر 2026",share:"شارك عبر واتساب",dockMap:"الطريق",
+    footLine:"جمعية أنصار الدين · مجموعة المغرب — الملتقى الدولي حول التصوف والسلام وحوار الحضارات · الدار البيضاء، 6–8 نونبر 2026",share:"شارك عبر واتساب",dockMap:"الطريق",
     copied:"تم النسخ",copy:"نسخ",email:"البريد الإلكتروني",waLabel:"واتساب",fillName:"أضف اسمك ورسالتك أولاً."
   }
 };
@@ -861,7 +859,7 @@ const DAYS = [
      title:{fr:"Cérémonie d'ouverture officielle",en:"Official opening ceremony",ar:"حفل الافتتاح الرسمي"},
      list:{fr:["Récitation de versets du Saint Coran","Mot du Président au nom de Jamhiyatou Ansaarud-Dîn – Groupement Maroc","Allocutions des représentants des autorités et institutions officielles, diplomatiques et religieuses","Discours des partenaires","Hommage au Khalife Seydi Ali Al Hassan Cissé, avec un discours officiel au nom de sa famille","Hommage à Cheikh Mouhamad Al Makki Ibrahim Niass","Leçons inaugurales scientifiques et spirituelles, en préambule aux travaux du panel"],
            en:["Recitation from the Holy Quran","Address by the President on behalf of Jamhiyatou Ansaarud-Dîn – Morocco Chapter","Addresses by representatives of official, diplomatic and religious authorities","Partners' addresses","Tribute to Khalife Seydi Ali Al Hassan Cissé, with an official address on behalf of his family","Tribute to Cheikh Mouhamad Al Makki Ibrahim Niass","Inaugural scholarly and spiritual lectures opening the panel"],
-           ar:["تلاوة آيات بينات من الذكر الحكيم","كلمة الرئيس باسم جمعية أنصار الدين – فرع المغرب","كلمات ممثلي السلطات والمؤسسات الرسمية والدبلوماسية والدينية","كلمات الشركاء","تكريم الخليفة سيدي علي الحسن سيسي، مع كلمة رسمية باسم أسرته","تكريم الشيخ محمد المكي إبراهيم انياس","دروس افتتاحية علمية وروحية تمهيداً لأشغال الجلسة"]}},
+           ar:["تلاوة آيات بينات من الذكر الحكيم","كلمة الرئيس باسم جمعية أنصار الدين – مجموعة المغرب","كلمات ممثلي السلطات والمؤسسات الرسمية والدبلوماسية والدينية","كلمات الشركاء","تكريم الخليفة سيدي علي الحسن سيسي، مع كلمة رسمية باسم أسرته","تكريم الشيخ محمد المكي إبراهيم انياس","دروس افتتاحية علمية وروحية تمهيداً لأشغال الجلسة"]}},
     {pause:1,time:{fr:"15:10 – 16:00",en:"3:10 – 4:00 pm",ar:"15:10 – 16:00"}, start:"15:10", end:"16:00",
      title:{fr:"Prière de Asr et pause cocktail",en:"Asr prayer and refreshment break",ar:"صلاة العصر واستراحة"}},
     {time:{fr:"16:00 – 22:00",en:"4:00 – 10:00 pm",ar:"16:00 – 22:00"}, start:"16:00", end:"22:00",
@@ -892,9 +890,9 @@ const DAYS = [
      title:{fr:"Cérémonie de clôture officielle",en:"Official closing ceremony",ar:"حفل الاختتام الرسمي"},
      list:{fr:["Synthèse générale des travaux du colloque","Lecture et adoption des recommandations finales","Remise des certificats d'hommage aux personnalités honorées","Perspectives de coopération académique et culturelle","Allocution de clôture par Cheikh Abdoul Malick Niass, et remerciements aux participants et aux partenaires","Hommage à Mawlana Cheikh Ibrahim Niass (qu'Allah l'agrée)","Prière finale (Duaa) pour le Commandeur des croyants et le Royaume du Maroc, son gouvernement et son peuple"],
            en:["General summary of the proceedings","Reading and adoption of the final recommendations","Certificates of honour presented to the honoured figures","Outlook for academic and cultural cooperation","Closing address by Cheikh Abdoul Malick Niass and thanks to participants and partners","Tribute to Mawlana Cheikh Ibrahim Niass (may God be pleased with him)","Closing prayer (Duaa) for the Commander of the Faithful and the Kingdom of Morocco, its government and people"],
-           ar:["التقرير التركيبي العام لأشغال الندوة","قراءة التوصيات الختامية والمصادقة عليها","تسليم شهادات التكريم للشخصيات المكرَّمة","آفاق التعاون الأكاديمي والثقافي","الكلمة الختامية للشيخ عبد المالك انياس وشكر المشاركين والشركاء","تكريم خاص لمولانا الشيخ إبراهيم انياس رضي الله عنه","الدعاء الختامي لأمير المؤمنين وللمملكة المغربية حكومةً وشعباً"]}},
+           ar:["التقرير التركيبي العام لأشغال الملتقى","قراءة التوصيات الختامية والمصادقة عليها","تسليم شهادات التكريم للشخصيات المكرَّمة","آفاق التعاون الأكاديمي والثقافي","الكلمة الختامية للشيخ عبد المالك انياس وشكر المشاركين والشركاء","تكريم خاص لمولانا الشيخ إبراهيم انياس رضي الله عنه","الدعاء الختامي لأمير المؤمنين وللمملكة المغربية حكومةً وشعباً"]}},
     {pause:1,time:{fr:"15:00 – 16:00",en:"3:00 – 4:00 pm",ar:"15:00 – 16:00"}, start:"15:00", end:"16:00",
-     title:{fr:"Clôture du colloque · Déjeuner fraternel",en:"End of the colloquium · Fraternal lunch",ar:"اختتام الندوة · غداء أخوي"},
+     title:{fr:"Clôture du colloque · Déjeuner fraternel",en:"End of the colloquium · Fraternal lunch",ar:"اختتام الملتقى · غداء أخوي"},
      text:{fr:"En l'honneur des participants et des invités.",en:"In honour of participants and guests.",ar:"على شرف المشاركين والضيوف."}}
    ]}
 ];
@@ -1082,13 +1080,13 @@ function updateLinks(){
   const body = `${lang==="ar"?"السلام عليكم،":"Assalamou alaykoum,"}\n\n${msg}\n\n— ${name}\n(${topic} · Colloque Casablanca 2026)`;
   $("#sendWa").href = "https://wa.me/212645570124?text="+encodeURIComponent(body);
   $("#sendMail").href = "mailto:contact@ansaar-ma.com?subject="+encodeURIComponent("Colloque Casablanca 2026 — "+topic)+"&body="+encodeURIComponent(body);
-  const share = (lang==="ar" ? "الندوة الدولية «التصوف والسلام وحوار الحضارات» · الدار البيضاء، 6–8 نونبر 2026" : lang==="en" ? "International colloquium “Sufism, Peace and the Dialogue of Civilisations” · Casablanca, 6–8 Nov 2026" : "Colloque international « Le Soufisme, la Paix et le Dialogue des Civilisations » · Casablanca, 6–8 nov. 2026") + "\n" + SITE;
+  const share = (lang==="ar" ? "الملتقى الدولي «التصوف والسلام وحوار الحضارات» · الدار البيضاء، 6–8 نونبر 2026" : lang==="en" ? "International colloquium “Sufism, Peace and the Dialogue of Civilisations” · Casablanca, 6–8 Nov 2026" : "Colloque international « Le Soufisme, la Paix et le Dialogue des Civilisations » · Casablanca, 6–8 nov. 2026") + "\n" + SITE;
   $("#shareWa").href = "https://wa.me/?text="+encodeURIComponent(share);
-  const partMsg = lang==="ar"?"السلام عليكم، نرغب في الشراكة مع الندوة الدولية بالدار البيضاء.":lang==="en"?"Hello, we would like to partner with the Casablanca colloquium.":"Assalamou alaykoum, nous souhaitons devenir partenaire du colloque de Casablanca.";
+  const partMsg = lang==="ar"?"السلام عليكم، نرغب في الشراكة مع الملتقى الدولي بالدار البيضاء.":lang==="en"?"Hello, we would like to partner with the Casablanca colloquium.":"Assalamou alaykoum, nous souhaitons devenir partenaire du colloque de Casablanca.";
   $("#partWa").href = "https://wa.me/212645570124?text="+encodeURIComponent(partMsg);
   const accMsg = lang==="ar"?"السلام عليكم، أرجو تزويدي بمعلومات الوصول إلى قاعة الحفلات كريستاليا بسيدي معروف.":lang==="en"?"Hello, could you send me directions to the Cristalia reception hall in Sidi Maarouf?":"Assalamou alaykoum, pouvez-vous m'indiquer l'accès à la Salle des fêtes Cristalia à Sidi Maarouf ?";
   $("#v1Wa").href = "https://wa.me/212645570124?text="+encodeURIComponent(accMsg);
-  const calTitle = lang==="ar"?"ندوة التصوف والسلام وحوار الحضارات":lang==="en"?"Colloquium: Sufism, Peace and the Dialogue of Civilisations":"Colloque : Le Soufisme, la Paix et le Dialogue des Civilisations";
+  const calTitle = lang==="ar"?"الملتقى الدولي حول التصوف والسلام وحوار الحضارات":lang==="en"?"Colloquium: Sufism, Peace and the Dialogue of Civilisations":"Colloque : Le Soufisme, la Paix et le Dialogue des Civilisations";
   $("#calLink").href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(calTitle)+"&dates=20261106T150000Z/20261108T150000Z&ctz=Africa/Casablanca&location="+encodeURIComponent("Salle des fêtes Cristalia, Sidi Maarouf, Casablanca")+"&details="+encodeURIComponent("Salle des fêtes Cristalia, Sidi Maarouf\nVen. 6 : 16h–22h30\nSam. 7 : 11h–22h\nDim. 8 : 9h–16h\n"+SITE);
 }
 
