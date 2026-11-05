@@ -106,7 +106,7 @@ img{max-width:100%;height:auto;display:block}
 .khatam::after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:var(--gold);opacity:.09;
   -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='black' stroke-width='1.2'%3E%3Crect x='18' y='18' width='36' height='36'/%3E%3Crect x='18' y='18' width='36' height='36' transform='rotate(45 36 36)'/%3E%3Ccircle cx='36' cy='36' r='7'/%3E%3Cpath d='M0 0l10 10M72 0L62 10M0 72l10-10M72 72L62 62'/%3E%3C/g%3E%3C/svg%3E") 0 0/72px 72px repeat;
           mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='black' stroke-width='1.2'%3E%3Crect x='18' y='18' width='36' height='36'/%3E%3Crect x='18' y='18' width='36' height='36' transform='rotate(45 36 36)'/%3E%3Ccircle cx='36' cy='36' r='7'/%3E%3Cpath d='M0 0l10 10M72 0L62 10M0 72l10-10M72 72L62 62'/%3E%3C/g%3E%3C/svg%3E") 0 0/72px 72px repeat}
-.khatam::after{display:none!important}
+.dark-band .khatam::after,.dark-band.khatam::after{opacity:.12}
 
 /* ---------- En-tête ---------- */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(31,71,65,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:var(--on-dark);border-bottom:1px solid rgba(228,196,127,.22)}
@@ -137,13 +137,13 @@ img{max-width:100%;height:auto;display:block}
 .hero{position:relative;color:var(--on-dark);background:var(--dark-band);overflow:hidden;isolation:isolate}
 .hero-img{position:absolute;inset:0;z-index:-2}
 .hero-img img{width:100%;height:100%;object-fit:cover;object-position:62% 32%}
-.hero::before{content:none}
-.emblem{display:flex;align-items:center;gap:16px}
-.emblem img{width:84px;height:84px;border-radius:50%;flex:none;box-shadow:0 0 0 3px rgba(228,196,127,.55)}
-.emblem-ar{font-family:"Amiri",var(--f-ar-display);font-size:1.5rem;line-height:1.3;color:#FFFCF5}
-.emblem-fr{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;color:var(--on-dark-muted)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(90deg,rgba(15,44,40,.94) 0%,rgba(15,44,40,.78) 42%,rgba(15,44,40,.25) 75%,rgba(15,44,40,.1) 100%),
+             linear-gradient(0deg,rgba(15,44,40,.95) 0%,rgba(15,44,40,0) 38%)}
+[dir="rtl"] .hero::before{background:linear-gradient(270deg,rgba(15,44,40,.94) 0%,rgba(15,44,40,.78) 42%,rgba(15,44,40,.25) 75%,rgba(15,44,40,.1) 100%),linear-gradient(0deg,rgba(15,44,40,.95) 0%,rgba(15,44,40,0) 38%)}
+@media (max-width:760px){.hero::before,[dir="rtl"] .hero::before{background:linear-gradient(0deg,rgba(15,44,40,.97) 0%,rgba(15,44,40,.82) 55%,rgba(15,44,40,.45) 100%)}}
 .hero .wrap{padding-block:clamp(40px,7vw,96px) clamp(36px,5vw,64px);display:grid;gap:28px}
-.hero-inner{max-width:760px;display:grid;gap:20px}
+.hero-inner{max-width:720px;display:grid;gap:20px}
 .basmala{font-family:"Amiri",var(--f-ar-display);font-size:clamp(1.3rem,1.1rem + .8vw,1.8rem);color:var(--gold-contrast);line-height:1.6}
 .edition{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:999px;border:1px solid rgba(228,196,127,.4);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:#F0DDAF;font-weight:600}
@@ -189,7 +189,7 @@ img{max-width:100%;height:auto;display:block}
 .about-text h2{font-size:var(--step-3);color:var(--ink)}
 .about-text p{color:var(--muted);max-width:62ch}
 .about-fig{position:relative}
-.about-fig img{border-radius:16px;aspect-ratio:4/5;width:100%;object-fit:cover;object-position:50% 40%}
+.about-fig img{border-radius:22px;box-shadow:0 30px 60px -30px rgba(18,30,26,.24);aspect-ratio:1385/1136;width:100%;object-fit:cover}
 .question{margin-top:8px;padding:22px 24px;border-radius:var(--radius);background:var(--sand);border:1px solid var(--line)}
 .question small{display:block;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-text);font-weight:700;margin-bottom:8px}
 [dir="rtl"] .question small{letter-spacing:0;font-size:.9rem}
@@ -472,13 +472,10 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
 <main id="accueil">
   <!-- HÉROS -->
   <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-img"><img src="img/hero-casablanca.webp" alt="" fetchpriority="high"></div>
     <div class="wrap">
       <div class="hero-inner">
         <p class="basmala" lang="ar" dir="rtl">بسم الله الرحمن الرحيم</p>
-        <div class="emblem">
-          <img src="img/logo-ansaar.webp" alt="Emblème de Jamhiyatou Ansaarud-Dîn" width="96" height="96" fetchpriority="high">
-          <div><p class="emblem-ar" lang="ar" dir="rtl">جمعية أنصار الدين</p><p class="emblem-fr">Jamhiyatou Ansaarud-Dîn · <span data-i18n="brandSub">Groupement Maroc</span></p></div>
-        </div>
         <div class="edition">
           <span class="pill" data-i18n="edition">Deuxième édition</span>
           <span class="pill" data-i18n="intl">Colloque international</span>
@@ -506,6 +503,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
         </div>
       </div>
     </div>
+    <span class="credit" data-i18n="credit">Mosquée Hassan II, Casablanca</span>
   </section>
 
   <!-- CHIFFRES -->
@@ -533,7 +531,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
         </div>
       </div>
       <div class="about-fig">
-        <img src="img/corniche.webp" alt="La mosquée Hassan II au coucher du soleil, Casablanca" width="1000" height="1494" loading="lazy">
+        <img src="img/maroc-senegal.webp" alt="Illustration : les cartes du Maroc et du Sénégal reliées par une poignée de main dorée" width="1200" height="984" loading="lazy">
       </div>
     </div>
   </section>

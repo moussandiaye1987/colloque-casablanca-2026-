@@ -27,8 +27,3 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - Nouvel organigramme du bureau Ansaarud-Dîn Maroc (mars 2025 – mars 2028).
 - QR code de la Salle Cristalia agrandi et net, pour un scan facile.
 - Programme officiel en français (PDF, 10 pages) dans `docs/`.
-
-## Version 3 (5 novembre 2026)
-
-- Retour à la sobriété du site d'origine : vert #1F4741, en-tête uni avec l'emblème,
-  sans photo de fond ni motif décoratif ; photo de la mosquée Hassan II à la place de l'illustration.
