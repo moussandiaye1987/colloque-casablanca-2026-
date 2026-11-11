@@ -587,11 +587,11 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       <div class="sec-head">
         <span class="eyebrow" data-i18n="phEyebrow">Album photo</span>
         <h2 data-i18n="phTitle">Le colloque en images</h2>
-        <p data-i18n="phLead">221 photos des trois journées à la Salle Cristalia. Touchez une photo pour l'agrandir, puis faites défiler.</p>
+        <p data-i18n="phLead">223 photos des trois journées à la Salle Cristalia. Touchez une photo pour l'agrandir, puis faites défiler.</p>
       </div>
       <div class="pgrid" id="photoGrid"></div>
       <div class="pmore">
-        <button type="button" class="btn btn-green" id="photoMore"><span id="photoMoreTxt">Afficher les 221 photos</span></button>
+        <button type="button" class="btn btn-green" id="photoMore"><span id="photoMoreTxt">Afficher les 223 photos</span></button>
       </div>
     </div>
   </section>
@@ -833,7 +833,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
 /* ===================== Textes ===================== */
 const T = {
   en:{
-    brandSub:"Morocco Chapter",navVideos:"Videos",navPhotos:"Photos",phEyebrow:"Photo album",phTitle:"The colloquium in pictures",phLead:"221 photos from the three days at the Cristalia hall. Tap a photo to enlarge it, then swipe through.",ctaVideos:"Watch the colloquium again",vidEyebrow:"Videos",vidTitle:"Relive the colloquium on video",vidLead:"Hadaratoul Jumma, opening and closing ceremonies, and full live broadcasts of each day, on YouTube.",navAbout:"The colloquium",navProg:"Programme",navSpk:"Speakers",navInfo:"Practical info",navContact:"Contact",
+    brandSub:"Morocco Chapter",navVideos:"Videos",navPhotos:"Photos",phEyebrow:"Photo album",phTitle:"The colloquium in pictures",phLead:"223 photos from the three days at the Cristalia hall. Tap a photo to enlarge it, then swipe through.",ctaVideos:"Watch the colloquium again",vidEyebrow:"Videos",vidTitle:"Relive the colloquium on video",vidLead:"Hadaratoul Jumma, opening and closing ceremonies, and full live broadcasts of each day, on YouTube.",navAbout:"The colloquium",navProg:"Programme",navSpk:"Speakers",navInfo:"Practical info",navContact:"Contact",
     edition:"Second edition",intl:"International colloquium",
     heroTitle:"Sufism, <em>Peace</em> and the Dialogue of Civilisations",
     heroLead:"Spiritual diplomacy and bilateral relations: the role of States and religious leaders in strengthening ties between Morocco and Senegal.",
@@ -868,7 +868,7 @@ const T = {
     copied:"Copied",copy:"Copy",email:"Email",waLabel:"WhatsApp",fillName:"Add your name and message first."
   },
   ar:{
-    brandSub:"مجموعة المغرب",navVideos:"الفيديوهات",navPhotos:"الصور",phEyebrow:"ألبوم الصور",phTitle:"الملتقى بالصور",phLead:"221 صورة من الأيام الثلاثة بقاعة كريستاليا. اضغط على صورة لتكبيرها، ثم مرّر للتنقل بين الصور.",ctaVideos:"شاهد الملتقى من جديد",vidEyebrow:"الفيديوهات",vidTitle:"عِش الملتقى من جديد بالفيديو",vidLead:"حضرة الجمعة، وحفلا الافتتاح والاختتام، والبث المباشر الكامل لأيام الملتقى، على يوتيوب.",navAbout:"الملتقى",navProg:"البرنامج",navSpk:"المتدخلون",navInfo:"معلومات عملية",navContact:"اتصل بنا",
+    brandSub:"مجموعة المغرب",navVideos:"الفيديوهات",navPhotos:"الصور",phEyebrow:"ألبوم الصور",phTitle:"الملتقى بالصور",phLead:"223 صورة من الأيام الثلاثة بقاعة كريستاليا. اضغط على صورة لتكبيرها، ثم مرّر للتنقل بين الصور.",ctaVideos:"شاهد الملتقى من جديد",vidEyebrow:"الفيديوهات",vidTitle:"عِش الملتقى من جديد بالفيديو",vidLead:"حضرة الجمعة، وحفلا الافتتاح والاختتام، والبث المباشر الكامل لأيام الملتقى، على يوتيوب.",navAbout:"الملتقى",navProg:"البرنامج",navSpk:"المتدخلون",navInfo:"معلومات عملية",navContact:"اتصل بنا",
     edition:"الدورة الثانية",intl:"ملتقى دولي",
     heroTitle:"التصوف و<em>السلام</em> وحوار الحضارات",
     heroLead:"الدبلوماسية الروحية والعلاقات الثنائية: دور الدول والزعماء الدينيين في تعزيز التقارب بين المغرب والسنغال.",
@@ -1184,7 +1184,7 @@ function renderHonors(){
   $("#honors").innerHTML = HONORS.map(h=>`<article class="honor"><small>${esc(L(h.k))}</small><h3>${esc(L(h.n))}</h3><p>${esc(L(h.d))}</p></article>`).join("");
   $("#rail").innerHTML = EXPO.map(e=>`<div class="stop"><span class="yr">${e.y}</span><span class="bar"></span><h4>${esc(L(e.t))}</h4><p>${esc(L(e.d))}</p></div>`).join("");
 }
-const PHOTO_COUNT = 221, PHOTO_FIRST = 24;
+const PHOTO_COUNT = 223, PHOTO_FIRST = 24;
 const pnum = i => String(i).padStart(3,"0");
 let photosAll = false;
 function renderPhotos(){

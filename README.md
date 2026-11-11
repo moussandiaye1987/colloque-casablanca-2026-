@@ -48,6 +48,10 @@ python3 -m http.server 8765 --bind 127.0.0.1
 
 ## Version 8 (11 novembre 2026)
 
-- Nouvelle section « Album photo » : 221 photos du colloque. La grille affiche d'abord
+- Nouvelle section « Album photo » : photos du colloque (223 depuis la V9). La grille affiche d'abord
   24 miniatures (`photos/thumb/`, WebP), puis toutes sur demande ; la visionneuse plein écran
   charge l'original (`photos/full/`, JPEG) et se parcourt aux flèches, au clavier ou en glissant.
+
+## Version 9 (11 novembre 2026)
+
+- Album photo actualisé : 223 photos (2 nouvelles photos, n° 222 et 223).
