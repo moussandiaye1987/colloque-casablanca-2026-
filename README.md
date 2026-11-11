@@ -45,3 +45,9 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - Nouvelle section « Vidéos » (entrée de menu, bouton principal de l'en-tête et barre mobile) :
   Hadaratoul Jumma, cérémonie d'ouverture (7 vidéos), cérémonie de clôture (3 vidéos)
   et 5 retransmissions intégrales, avec vignettes YouTube. Titres en FR / EN / AR.
+
+## Version 8 (11 novembre 2026)
+
+- Nouvelle section « Album photo » : 221 photos du colloque. La grille affiche d'abord
+  24 miniatures (`photos/thumb/`, WebP), puis toutes sur demande ; la visionneuse plein écran
+  charge l'original (`photos/full/`, JPEG) et se parcourt aux flèches, au clavier ou en glissant.
