@@ -39,3 +39,9 @@ python3 -m http.server 8765 --bind 127.0.0.1
 - Note conceptuelle de retour sur le site, en trois langues : le lien ouvre la version
   correspondant à la langue choisie (`docs/note-conceptuelle-colloque-2026-fr.pdf`, `-en.pdf`, `-ar.pdf`).
 - Versions anglaise et arabe traduites depuis la note française, dans la même mise en page (9 pages).
+
+## Version 7 (11 novembre 2026)
+
+- Nouvelle section « Vidéos » (entrée de menu, bouton principal de l'en-tête et barre mobile) :
+  Hadaratoul Jumma, cérémonie d'ouverture (7 vidéos), cérémonie de clôture (3 vidéos)
+  et 5 retransmissions intégrales, avec vignettes YouTube. Titres en FR / EN / AR.

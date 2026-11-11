@@ -263,6 +263,31 @@ img{max-width:100%;height:auto;display:block}
 
 /* ---------- Intervenants ---------- */
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.vgroups{display:grid;gap:clamp(32px,4vw,48px)}
+.vgroup{display:grid;gap:16px}
+.vgroup-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding-bottom:10px;border-bottom:1px solid var(--line)}
+.vgroup-head h3{font-size:var(--step-1);color:var(--ink)}
+.vgroup-head span{font-size:.88rem;color:var(--muted)}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));gap:16px}
+.vcard{display:grid;grid-template-rows:auto 1fr;border-radius:var(--radius);overflow:hidden;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit;transition:transform .2s,border-color .2s,box-shadow .2s}
+.vcard:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 14px 30px -20px rgba(18,30,26,.45)}
+.vthumb{position:relative;aspect-ratio:16/9;max-width:100%;background:var(--dark-band);overflow:hidden}
+.vthumb img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.vcard:hover .vthumb img{transform:scale(1.04)}
+.vthumb::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(15,35,30,.55),rgba(15,35,30,0) 55%)}
+.vplay{position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:rgba(247,242,228,.92);color:#1F4741;z-index:1;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.vplay svg{width:22px;height:22px;margin-inline-start:3px}
+[dir="rtl"] .vplay svg{margin-inline-start:0;margin-inline-end:3px}
+.vbadge{position:absolute;top:10px;inset-inline-start:10px;z-index:1;display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:999px;background:rgba(15,35,30,.78);color:#F7F2E4;font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+[dir="rtl"] .vbadge{letter-spacing:0;font-size:.82rem}
+.vbadge.live::before{content:"";width:7px;height:7px;border-radius:50%;background:#FF6B57}
+.vbody{display:grid;gap:4px;padding:14px 16px 16px;align-content:start}
+.vbody > *{min-width:0}
+.vbody small{font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-text)}
+[dir="rtl"] .vbody small{letter-spacing:0;font-size:.86rem}
+.vbody b{font-weight:600;color:var(--ink);line-height:1.35}
+.vbody .yt{margin-top:6px;font-size:.8rem;color:var(--muted)}
+@media (max-width:560px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.vbody{padding:10px 12px 12px}.vbody b{font-size:.92rem}.vplay{width:42px;height:42px}.vplay svg{width:18px;height:18px}.vbadge{top:6px;inset-inline-start:6px;padding:3px 8px;font-size:.64rem}.vbody .yt{display:none}}
 .chip{all:unset;cursor:pointer;padding:8px 16px;border-radius:999px;border:1px solid var(--line);font-size:.88rem;font-weight:600;color:var(--fg);background:var(--surface)}
 .chip[aria-pressed="true"]{background:var(--dark-band);border-color:var(--dark-band);color:var(--on-dark)}
 .chip:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
@@ -436,6 +461,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
   <symbol id="i-dl" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2A9.7 9.7 0 0 0 3.6 16.8L2.3 21.7l5-1.3A9.7 9.7 0 1 0 12 2.2zm0 17.7a8 8 0 0 1-4.1-1.1l-.3-.2-3 .8.8-2.9-.2-.3A8 8 0 1 1 12 19.9zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c-.1-.1-.2-.2-.4-.3z"/></symbol>
   <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5.5A1.5 1.5 0 0 0 14.5 4h-9A1.5 1.5 0 0 0 4 5.5v9A1.5 1.5 0 0 0 5.5 16H8"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
   <symbol id="i-list" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11"/><circle cx="4.5" cy="6" r="1"/><circle cx="4.5" cy="12" r="1"/><circle cx="4.5" cy="18" r="1"/></symbol>
   <symbol id="i-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></symbol>
   <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5l5 5-5 5"/></symbol>
@@ -452,6 +478,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       <span><b>ANSAARUD-DÎN</b><small data-i18n="brandSub">Groupement Maroc</small></span>
     </a>
     <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#videos" data-i18n="navVideos">Vidéos</a>
       <a href="#colloque" data-i18n="navAbout">Le colloque</a>
       <a href="#programme" data-i18n="navProg">Programme</a>
       <a href="#intervenants" data-i18n="navSpk">Intervenants</a>
@@ -498,7 +525,8 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
           </div>
         </div>
         <div class="cta-row">
-          <a class="btn btn-gold" href="#programme"><svg><use href="#i-list"/></svg><span data-i18n="ctaProg">Voir le programme</span></a>
+          <a class="btn btn-gold" href="#videos"><svg><use href="#i-play"/></svg><span data-i18n="ctaVideos">Revoir le colloque en vidéo</span></a>
+          <a class="btn btn-ghost" href="#programme"><svg><use href="#i-list"/></svg><span data-i18n="ctaProg">Voir le programme</span></a>
           <a class="btn btn-ghost" href="https://maps.app.goo.gl/rKhbDGGFphEzyyer8" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span data-i18n="ctaMap">Itinéraire · Salle Cristalia</span></a>
         </div>
       </div>
@@ -516,6 +544,18 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       <div class="fact"><b>AR · FR</b><span data-i18n="fTrad">traduction simultanée</span></div>
     </div>
   </div>
+
+  <!-- VIDÉOS -->
+  <section class="section videos-sec" id="videos">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow" data-i18n="vidEyebrow">Vidéos</span>
+        <h2 data-i18n="vidTitle">Revivre le colloque en vidéo</h2>
+        <p data-i18n="vidLead">Hadaratoul Jumma, cérémonies d'ouverture et de clôture, et retransmissions intégrales des journées, sur YouTube.</p>
+      </div>
+      <div id="videoGroups" class="vgroups"></div>
+    </div>
+  </section>
 
   <!-- LE COLLOQUE -->
   <section class="section" id="colloque">
@@ -730,7 +770,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
 
 <nav class="dock" aria-label="Accès rapide">
   <a href="#programme"><svg><use href="#i-list"/></svg><span data-i18n="navProg">Programme</span></a>
-  <a href="https://maps.app.goo.gl/rKhbDGGFphEzyyer8" target="_blank" rel="noopener"><svg><use href="#i-pin"/></svg><span data-i18n="dockMap">Itinéraire</span></a>
+  <a href="#videos"><svg><use href="#i-play"/></svg><span data-i18n="navVideos">Vidéos</span></a>
   <a href="https://wa.me/212645570124" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span>WhatsApp</span></a>
 </nav>
 
@@ -746,7 +786,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
 /* ===================== Textes ===================== */
 const T = {
   en:{
-    brandSub:"Morocco Chapter",navAbout:"The colloquium",navProg:"Programme",navSpk:"Speakers",navInfo:"Practical info",navContact:"Contact",
+    brandSub:"Morocco Chapter",navVideos:"Videos",ctaVideos:"Watch the colloquium again",vidEyebrow:"Videos",vidTitle:"Relive the colloquium on video",vidLead:"Hadaratoul Jumma, opening and closing ceremonies, and full live broadcasts of each day, on YouTube.",navAbout:"The colloquium",navProg:"Programme",navSpk:"Speakers",navInfo:"Practical info",navContact:"Contact",
     edition:"Second edition",intl:"International colloquium",
     heroTitle:"Sufism, <em>Peace</em> and the Dialogue of Civilisations",
     heroLead:"Spiritual diplomacy and bilateral relations: the role of States and religious leaders in strengthening ties between Morocco and Senegal.",
@@ -781,7 +821,7 @@ const T = {
     copied:"Copied",copy:"Copy",email:"Email",waLabel:"WhatsApp",fillName:"Add your name and message first."
   },
   ar:{
-    brandSub:"مجموعة المغرب",navAbout:"الملتقى",navProg:"البرنامج",navSpk:"المتدخلون",navInfo:"معلومات عملية",navContact:"اتصل بنا",
+    brandSub:"مجموعة المغرب",navVideos:"الفيديوهات",ctaVideos:"شاهد الملتقى من جديد",vidEyebrow:"الفيديوهات",vidTitle:"عِش الملتقى من جديد بالفيديو",vidLead:"حضرة الجمعة، وحفلا الافتتاح والاختتام، والبث المباشر الكامل لأيام الملتقى، على يوتيوب.",navAbout:"الملتقى",navProg:"البرنامج",navSpk:"المتدخلون",navInfo:"معلومات عملية",navContact:"اتصل بنا",
     edition:"الدورة الثانية",intl:"ملتقى دولي",
     heroTitle:"التصوف و<em>السلام</em> وحوار الحضارات",
     heroLead:"الدبلوماسية الروحية والعلاقات الثنائية: دور الدول والزعماء الدينيين في تعزيز التقارب بين المغرب والسنغال.",
@@ -958,6 +998,48 @@ const EXPO = [
  {y:"2015",t:{fr:"Discours Royal",en:"Royal Address",ar:"الخطاب الملكي"},d:{fr:"Un jalon de la relation entre le Royaume et le Sénégal.",en:"A milestone in the relationship between the Kingdom and Senegal.",ar:"محطة بارزة في العلاقة بين المملكة والسنغال."}}
 ];
 
+const VIDEOS = [
+ {id:"ven", title:{fr:"Vendredi 6 · Hadaratoul Jumma",en:"Friday 6 · Hadaratoul Jumma",ar:"الجمعة 6 · حضرة الجمعة"},
+  sub:{fr:"Ouverture spirituelle",en:"Spiritual opening",ar:"الافتتاح الروحي"},
+  items:[
+   {v:"VQvf9CAq2Dc", live:1, k:"hadara", n:{fr:"Hadaratoul Jumma · partie 1",en:"Hadaratoul Jumma · part 1",ar:"حضرة الجمعة · الجزء 1"}},
+   {v:"CeAeKpEJG94", live:1, k:"hadara", n:{fr:"Hadaratoul Jumma · partie 2",en:"Hadaratoul Jumma · part 2",ar:"حضرة الجمعة · الجزء 2"}}
+  ]},
+ {id:"ouv", title:{fr:"Cérémonie d'ouverture",en:"Opening ceremony",ar:"حفل الافتتاح"},
+  sub:{fr:"Samedi 7 novembre",en:"Saturday 7 November",ar:"السبت 7 نونبر"},
+  items:[
+   {v:"lCoaiFgff6Y", k:"coran", n:"Oustaz Baba Lamine Biteye"},
+   {v:"195SIhx_YVI", k:"disc", n:"Cheikh Babacar Niass"},
+   {v:"2UDrJ6uDn00", k:"disc", n:"Al Khalifa Cheikh Ibrahima Bâ"},
+   {v:"lfTZWEmElMU", k:"disc", n:"Cheikh Baye El Hadji Niass"},
+   {v:"0rGFBaEdee0", k:"disc", n:"Cheikh Moustapha Cheikh Ahmad Dame"},
+   {v:"nmNa7pDmaPQ", k:"disc", n:"Cheikh Aboubacar Bâ Atidjiani"},
+   {v:"uLcC13H-QzI", k:"disc", n:"Ministre Amy Mara Dieye"}
+  ]},
+ {id:"clo", title:{fr:"Cérémonie de clôture",en:"Closing ceremony",ar:"حفل الاختتام"},
+  sub:{fr:"Dimanche 8 novembre",en:"Sunday 8 November",ar:"الأحد 8 نونبر"},
+  items:[
+   {v:"tTlj-kfRy7Q", k:"coran", n:"Cheikh Zeyni Abidine Niass"},
+   {v:"4qzELx_vTps", k:"disc", n:"Cheikh Baye Bachir Cissé"},
+   {v:"CMdkkkJNeeI", k:"disc", n:"Seydi Aliou Cissé At-Tijani"}
+  ]},
+ {id:"dir", title:{fr:"Retransmissions intégrales",en:"Full live broadcasts",ar:"البث المباشر الكامل"},
+  sub:{fr:"Les directs du colloque",en:"The colloquium's live streams",ar:"البثوث المباشرة للملتقى"},
+  items:[
+   {v:"bmwKtPgDejs", live:1, k:"direct", n:1},
+   {v:"X8oAiqf9GcY", live:1, k:"direct", n:2},
+   {v:"hZFEoZLABcU", live:1, k:"direct", n:3},
+   {v:"cFg0v8Odz8g", live:1, k:"direct", n:4},
+   {v:"u0In0xFfvI0", live:1, k:"direct", n:5}
+  ]}
+];
+const VKIND = {
+ coran:{fr:"Récital du Saint Coran",en:"Recitation of the Holy Quran",ar:"تلاوة القرآن الكريم"},
+ disc:{fr:"Discours",en:"Address",ar:"كلمة"},
+ hadara:{fr:"Hadaratoul Jumma",en:"Hadaratoul Jumma",ar:"حضرة الجمعة"},
+ direct:{fr:"Direct",en:"Live",ar:"بث مباشر"}
+};
+
 const CONTACTS = [
  {type:"wa", v:"+212 645-570124", raw:"212645570124"},
  {type:"wa", v:"+212 631-331784", raw:"212631331784"},
@@ -1055,6 +1137,23 @@ function renderHonors(){
   $("#honors").innerHTML = HONORS.map(h=>`<article class="honor"><small>${esc(L(h.k))}</small><h3>${esc(L(h.n))}</h3><p>${esc(L(h.d))}</p></article>`).join("");
   $("#rail").innerHTML = EXPO.map(e=>`<div class="stop"><span class="yr">${e.y}</span><span class="bar"></span><h4>${esc(L(e.t))}</h4><p>${esc(L(e.d))}</p></div>`).join("");
 }
+function renderVideos(){
+  const yt = lang==="ar" ? "مشاهدة على يوتيوب" : lang==="en" ? "Watch on YouTube" : "Regarder sur YouTube";
+  const cnt = n => lang==="ar" ? `${n} فيديو` : lang==="en" ? `${n} video${n>1?"s":""}` : `${n} vidéo${n>1?"s":""}`;
+  $("#videoGroups").innerHTML = VIDEOS.map(g=>`
+    <div class="vgroup">
+      <div class="vgroup-head"><h3>${esc(L(g.title))}</h3><span>${esc(L(g.sub))} · ${esc(cnt(g.items.length))}</span></div>
+      <div class="vgrid">${g.items.map(it=>{
+        const kind = L(VKIND[it.k]);
+        const name = it.k==="direct" ? `${L({fr:"Retransmission",en:"Broadcast",ar:"البث"})} ${it.n}` : (typeof it.n==="string" ? it.n : L(it.n));
+        return `<a class="vcard" href="https://www.youtube.com/watch?v=${it.v}" target="_blank" rel="noopener" aria-label="${esc(kind)} – ${esc(name)} (YouTube)">
+          <span class="vthumb"><img src="https://i.ytimg.com/vi/${it.v}/hqdefault.jpg" alt="" loading="lazy" width="480" height="360" onerror="this.remove()">
+            ${it.live?`<span class="vbadge live">${esc(VKIND.direct[lang]||VKIND.direct.fr)}</span>`:""}
+            <span class="vplay"><svg><use href="#i-play"/></svg></span></span>
+          <span class="vbody"><small>${esc(kind)}</small><b><bdi>${esc(name)}</bdi></b><span class="yt">${esc(yt)}</span></span>
+        </a>`;}).join("")}</div>
+    </div>`).join("");
+}
 function renderContacts(){
   $("#lines").innerHTML = CONTACTS.map(c=>`
     <div class="line">
@@ -1071,7 +1170,7 @@ function applyLang(){
   document.querySelectorAll("[data-i18n]").forEach(el=>{ el.textContent = t(el.dataset.i18n); });
   document.querySelectorAll("[data-i18n-html]").forEach(el=>{ el.innerHTML = t(el.dataset.i18nHtml); });
   document.querySelectorAll(".lang button").forEach(b=>b.setAttribute("aria-pressed", String(b.dataset.lang===lang)));
-  renderTabs(); renderDay(); renderFilters(); renderSpeakers(); renderHonors(); renderContacts(); updateLinks(); tick();
+  renderTabs(); renderDay(); renderFilters(); renderSpeakers(); renderHonors(); renderVideos(); renderContacts(); updateLinks(); tick();
 }
 
 /* ===================== Liens dynamiques ===================== */
