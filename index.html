@@ -304,6 +304,8 @@ img{max-width:100%;height:auto;display:block}
 .spk .role{font-size:.88rem;color:var(--muted)}
 .spk .talk{margin-top:10px;font-family:var(--f-quote);font-size:1.02rem;color:var(--fg);line-height:1.5}
 .spk .talk::before{content:"« "}.spk .talk::after{content:" »"}
+.spk .talk.plain::before,.spk .talk.plain::after{content:none}
+.spk .axt{font-size:.82rem;color:var(--muted);line-height:1.35;margin-top:3px}
 
 /* ---------- Hommages & exposition ---------- */
 .dark-band{background:var(--dark-band);color:var(--on-dark)}
@@ -369,7 +371,7 @@ img{max-width:100%;height:auto;display:block}
 .notes div > *{min-width:0}
 .notes svg{width:20px;height:20px;color:var(--gold);margin-top:3px}
 @media (max-width:860px){.infos{grid-template-columns:1fr}.side figure img{aspect-ratio:16/10}}
-.docs{display:grid;grid-template-columns:repeat(2,minmax(0,420px));gap:14px;margin-top:clamp(28px,4vw,44px)}
+.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:14px;margin-top:clamp(28px,4vw,44px)}
 .doc{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:18px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);text-decoration:none;transition:border-color .2s,transform .2s}
 .doc > *{min-width:0}
 .doc:hover{border-color:var(--gold);transform:translateY(-2px)}
@@ -564,7 +566,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       <div class="fact"><b>3</b><span data-i18n="fDays">jours de rencontres</span></div>
       <div class="fact"><b>2</b><span data-i18n="fPanels">panels scientifiques</span></div>
       <div class="fact"><b>8</b><span data-i18n="fAxes">axes de réflexion</span></div>
-      <div class="fact"><b>15</b><span data-i18n="fSpk">intervenants</span></div>
+      <div class="fact"><b>22</b><span data-i18n="fSpk">intervenants</span></div>
       <div class="fact"><b>AR · FR</b><span data-i18n="fTrad">traduction simultanée</span></div>
     </div>
   </div>
@@ -638,8 +640,8 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
     <div class="wrap">
       <div class="sec-head">
         <span class="eyebrow" data-i18n="spkEyebrow">Intervenants</span>
-        <h2 data-i18n="spkTitle">Quinze voix du Maroc, du Sénégal et du Nigéria</h2>
-        <p data-i18n="spkLead">Savants, chercheurs, diplomates et guides spirituels. Les intitulés des communications sont donnés dans leur version française.</p>
+        <h2 data-i18n="spkTitle">Vingt-deux intervenants, huit axes de réflexion</h2>
+        <p data-i18n="spkLead">Savants, chercheurs, diplomates et guides spirituels du Maroc, du Sénégal, du Nigéria et d'ailleurs, d'après la liste des intervenants et des thèmes retenus. Les intitulés des communications sont donnés dans leur version française.</p>
       </div>
       <div class="filters" id="filters" role="group" aria-label="Filtrer"></div>
       <div class="speakers" id="speakers"></div>
@@ -718,6 +720,7 @@ dialog .close{all:unset;cursor:pointer;display:block;margin:10px auto 0;color:#f
       <div class="docs">
         <a class="doc" id="noteLink" href="docs/note-conceptuelle-colloque-2026-fr.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d1">Note conceptuelle</b><span data-i18n="d1s">9 pages</span></span></a>
         <a class="doc" href="docs/programme-officiel-colloque-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d2">Programme officiel</b><span data-i18n="d2s">10 pages</span></span></a>
+        <a class="doc" href="docs/intervenants-et-themes-colloque-2026.pdf" target="_blank" rel="noopener"><span class="ic">PDF</span><span><b data-i18n="d4">Intervenants et thèmes</b><span data-i18n="d4s">3 pages</span></span></a>
       </div>
     </div>
   </section>
@@ -848,8 +851,8 @@ const T = {
     progEyebrow:"Programme",progTitle:"Three days, three highlights",progLead:"Tap a theme to see its topics and speakers. The programme is updated live during the colloquium.",
     progNote:"Cultural and spiritual Dhikr and Madih sequences punctuate the talks. Arabic–French simultaneous translation.",
     dlProg:"Official programme · PDF",addCal:"Add to my calendar",today:"Today",now:"Now",
-    spkEyebrow:"Speakers",spkTitle:"Fifteen voices from Morocco, Senegal and Nigeria",spkLead:"Scholars, researchers, diplomats and spiritual guides. Talk titles are given in their French version.",
-    all:"All",opening:"Opening",panel1:"Panel 1 · Sat",panel2:"Panel 2 · Sun",
+    spkEyebrow:"Speakers",spkTitle:"Twenty-two speakers, eight themes",spkLead:"Scholars, researchers, diplomats and spiritual guides from Morocco, Senegal, Nigeria and beyond, according to the list of speakers and selected themes. Talk titles are given in their French version.",
+    all:"All",opening:"Opening ceremony",daySat:"Sat 7 · Opening & Panel 1",daySun:"Sun 8 · Panel 2",axisNA:"Theme not specified",panel1:"Panel 1 · Sat",panel2:"Panel 2 · Sun",
     honEyebrow:"Official tributes",honTitle:"Honoured figures",
     expoEyebrow:"Documentary exhibition",expoTitle:"Milestones in Moroccan–Senegalese ties",
     memTitle:"Memorial space · Sayyida Rokhaya bint Cheikh Ibrahim Niass",memText:"A space dedicated to her spiritual and educational work, and her role in transmitting, preserving and safeguarding the legacy of Mawlana Cheikh Ibrahim Niass.",
@@ -857,7 +860,7 @@ const T = {
     askAccess:"Ask for directions",hFri:"Friday 6",hSat:"Saturday 7",hSun:"Sunday 8",qrCap:"Scan to open directions",
     v2When:"Friday 6, Saturday 7 and Sunday 8 November",v2Name:"Cristalia reception hall",v2Text:"The single venue for all three days of the colloquium, in Sidi Maarouf, Casablanca.",openMaps:"Open in Google Maps",
     n1:"Arabic–French simultaneous translation during the panels.",n2:"The colloquium closes on Sunday at 3 pm, followed by a fraternal lunch for participants and guests.",n3:"Accommodation, access and press accreditation: message the organisers on WhatsApp.",
-    aerialCap:"Casablanca, host city",d1:"Concept note",d1s:"9 pages · English",d2:"Official programme",d2s:"10 pages · in French",d3:"Invitation card",d3s:"Two-sided",
+    aerialCap:"Casablanca, host city",d1:"Concept note",d1s:"9 pages · English",d4:"Speakers and themes",d4s:"3 pages · in French",d2:"Official programme",d2s:"10 pages · in French",d3:"Invitation card",d3s:"Two-sided",
     orgEyebrow:"The organiser",orgP1:"A religious and social association affiliated with the National Federation of Senegal, Jamhiyatou Ansaarud-Dîn carries the motto “Nahnu Ansaarullâh”. Its Morocco Chapter organises this colloquium in Casablanca.",
     orgP2:"The board serving from March 2025 to March 2028 coordinates the women's, communication, organisation and cultural committees.",recLabel:"Registration",recDate:"of 31 October 1960",bureauCap:"Board · March 2025 – March 2028",zoom:"Enlarge",close:"Close",
     partEyebrow:"Partners",partTitle:"Associate your institution with the colloquium",partText:"Institutions, local authorities, businesses and media: official partners will be presented here and at the opening ceremony on Saturday 7 November.",partCta:"Become a partner",
@@ -883,8 +886,8 @@ const T = {
     progEyebrow:"البرنامج",progTitle:"ثلاثة أيام، ثلاث محطات",progLead:"اضغط على محور لعرض مواضيعه والمتدخلين فيه. يُحدَّث البرنامج مباشرة خلال الملتقى.",
     progNote:"تتخلل المداخلاتِ فقراتٌ ثقافية وروحية من الذكر والمديح. ترجمة فورية عربية–فرنسية.",
     dlProg:"البرنامج الرسمي · PDF",addCal:"أضف إلى مفكرتي",today:"اليوم",now:"الآن",
-    spkEyebrow:"المتدخلون",spkTitle:"خمسة عشر صوتاً من المغرب والسنغال ونيجيريا",spkLead:"علماء وباحثون ودبلوماسيون ومرشدون روحيون. عناوين المداخلات مذكورة بصيغتها الفرنسية.",
-    all:"الكل",opening:"الافتتاح",panel1:"الجلسة 1 · السبت",panel2:"الجلسة 2 · الأحد",
+    spkEyebrow:"المتدخلون",spkTitle:"اثنان وعشرون متدخلاً وثمانية محاور",spkLead:"علماء وباحثون ودبلوماسيون ومرشدون روحيون من المغرب والسنغال ونيجيريا وغيرها، وفق لائحة المتدخلين والمحاور المعتمدة. عناوين المداخلات مذكورة بصيغتها الفرنسية.",
+    all:"الكل",opening:"حفل الافتتاح",daySat:"السبت 7 · الافتتاح والجلسة 1",daySun:"الأحد 8 · الجلسة 2",axisNA:"المحور غير محدد",panel1:"الجلسة 1 · السبت",panel2:"الجلسة 2 · الأحد",
     honEyebrow:"التكريمات الرسمية",honTitle:"شخصيات مكرَّمة",
     expoEyebrow:"معرض وثائقي",expoTitle:"محطات تاريخية في التقارب المغربي السنغالي",
     memTitle:"فضاء تذكاري · السيدة رقية بنت الشيخ إبراهيم انياس",memText:"فضاء مخصص لجهودها الروحية والتربوية ودورها في نقل إرث مولانا الشيخ إبراهيم انياس وصونه والحفاظ عليه.",
@@ -892,7 +895,7 @@ const T = {
     hFri:"الجمعة 6",hSat:"السبت 7",hSun:"الأحد 8",qrCap:"امسح الرمز لفتح مسار الوصول",askAccess:"اطلب معلومات الوصول",
     v2When:"الجمعة 6 والسبت 7 والأحد 8 نونبر",v2Name:"قاعة الحفلات كريستاليا",v2Text:"المكان الوحيد لأيام الملتقى الثلاثة، بسيدي معروف، الدار البيضاء.",openMaps:"افتح في خرائط Google",
     n1:"ترجمة فورية عربية–فرنسية خلال الجلسات.",n2:"اختتام الملتقى يوم الأحد على الساعة 15:00، يليه غداء أخوي على شرف المشاركين والضيوف.",n3:"الإقامة والوصول واعتماد الصحافة: راسلوا اللجنة المنظمة عبر واتساب.",
-    aerialCap:"الدار البيضاء، المدينة المضيفة",d1:"الورقة المفاهيمية",d1s:"9 صفحات · بالعربية",d2:"البرنامج الرسمي",d2s:"10 صفحات · بالفرنسية",d3:"بطاقة الدعوة",d3s:"وجهان",
+    aerialCap:"الدار البيضاء، المدينة المضيفة",d1:"الورقة المفاهيمية",d1s:"9 صفحات · بالعربية",d4:"المتدخلون والمحاور",d4s:"3 صفحات · بالفرنسية",d2:"البرنامج الرسمي",d2s:"10 صفحات · بالفرنسية",d3:"بطاقة الدعوة",d3s:"وجهان",
     orgEyebrow:"الجهة المنظمة",orgP1:"جمعية دينية واجتماعية تابعة للاتحاد الوطني للسنغال، شعارها «نحن أنصار الله». تنظم مجموعتها بالمغرب هذا الملتقى في الدار البيضاء.",
     orgP2:"يتولى المكتب، في ولايته من مارس 2025 إلى مارس 2028، تنسيق لجان المرأة والتواصل والتنظيم والثقافة.",recLabel:"وصل الإيداع",recDate:"بتاريخ 31 أكتوبر 1960",bureauCap:"المكتب · مارس 2025 – مارس 2028",zoom:"تكبير",close:"إغلاق",
     partEyebrow:"الشركاء",partTitle:"اجعلوا مؤسستكم شريكاً في الملتقى",partText:"مؤسسات وجماعات ترابية ومقاولات ووسائل إعلام: سيُقدَّم الشركاء الرسميون هنا وخلال حفل الافتتاح يوم السبت 7 نونبر.",partCta:"كن شريكاً",
@@ -904,7 +907,7 @@ const T = {
   }
 };
 const FR = {}; // rempli depuis le HTML au chargement
-Object.assign(FR,{cdLive:"Le colloque est en cours",cdDone:"Merci de votre présence",today:"Aujourd'hui",now:"En ce moment",all:"Tous",opening:"Ouverture",panel1:"Panel 1 · Sam.",panel2:"Panel 2 · Dim.",copied:"Copié",copy:"Copier",email:"E-mail",waLabel:"WhatsApp",fillName:"Ajoutez votre nom et votre message."});
+Object.assign(FR,{cdLive:"Le colloque est en cours",cdDone:"Merci de votre présence",today:"Aujourd'hui",now:"En ce moment",all:"Tous",opening:"Cérémonie d'ouverture",daySat:"Sam. 7 · Ouverture et Panel 1",daySun:"Dim. 8 · Panel 2",axisNA:"Thème et axe non précisés",panel1:"Panel 1 · Sam.",panel2:"Panel 2 · Dim.",copied:"Copié",copy:"Copier",email:"E-mail",waLabel:"WhatsApp",fillName:"Ajoutez votre nom et votre message."});
 
 /* ===================== Données du programme ===================== */
 const DAYS = [
@@ -986,23 +989,33 @@ const DAYS = [
 ];
 
 /* Axes + intervenants */
+/* Intervenants et thèmes retenus (document « Intervenants et thèmes – Colloque 2026 »).
+   d : journée où l'intervenant figure dans le document ; g/ax : panel et axe du thème. */
 const SPK = [
- {id:"bn", n:"Oustaz Babacar Niang", g:"OUV", ax:null, role:"Leçon inaugurale scientifique et spirituelle", talk:null},
- {id:"inn", n:"Cheikh Ibrahim Nassirou Niass", g:"P1", ax:2, role:"Cheikh Ibrahim Niass et le Maroc", talk:null},
- {id:"ikn", n:"Cheikh Ibrahim Khouraychi Niass", g:"P1", ax:3, role:"", talk:"Diplomatie spirituelle et relations bilatérales : le rôle des États et des chefs religieux dans le renforcement du rapprochement entre le Maroc et le Sénégal (Cheikh Ibrahim Niass et sa famille comme modèle)"},
- {id:"nen", n:"Cheikh Nour Eddine Mohamed Al Amine Ibrahim Niass", g:"P1", ax:4, role:"Chercheur en études islamiques", talk:"Quand le savoir devient un pont entre les nations : Oustaz Mahmoud Diop et le parcours du rapprochement maroco-sénégalais"},
- {id:"mmd", n:"Dr Mouhamed Mbacké Diouf", g:"P1", ax:4, role:"Membre de la Fondation Mohammed VI des oulémas africains, bureau de Dakar", talk:"Le rôle de la voie mouride dans le renforcement des relations entre le Royaume chérifien et le Sénégal"},
- {id:"od", n:"Ousmane Diaw", g:"P1", ax:5, role:"", talk:"Les échanges intellectuels entre les savants du Maghreb et ceux de la région sénégambienne à travers les réponses du Marocain El-Hadji Abdul Karim Bennis aux questions du Sénégambien El-Hadji Abdoulaye Niass"},
- {id:"ab", n:"Dr Abdelmoughith Bassir", g:"P2", ax:1, role:"Président du Conseil scientifique local de la province de Berrechid ; membre de la Fondation Mohammed Bassir", talk:"Le devoir des gens du soufisme au Maroc et au Sénégal dans le raffermissement des liens entre les deux pays"},
- {id:"mhc", n:"Cheikh Mounir Hassan Cissé", g:"P2", ax:1, role:"Directeur de l'Institut islamique afro-américain d'études à distance (AAII) ; chercheur, Université Al-Azhar", talk:"Mobilisation du soft power spirituel dans la prévention des conflits et la promotion de la paix"},
- {id:"as", n:"Seydi Alioune Seck", g:"P2", ax:1, role:"Enseignant d'arabe", talk:"L'éducation spirituelle chez Cheikh Ibrahim Niass et son impact sur l'ancrage des valeurs de paix et de fraternité humaine"},
- {id:"fsn", n:"Seyyida Fatiha Salim Niang", g:"P2", ax:2, role:"Diplômée en diplomatie de l'Université Al Akhawayn d'Ifrane", talk:"Les quatre points de l'axe : impact mondial, rayonnement de la Tijaniyya, production intellectuelle et diplomatie culturelle de Cheikh Ibrahim Niass"},
- {id:"pss", n:"Cheikh Pape Samba Sarr", g:"P2", ax:2, role:"", talk:"L'impact mondial de Cheikh Ibrahim Niass et son rôle pionnier dans la diplomatie culturelle et spirituelle"},
- {id:"ns", n:"Imam Ndaga Sarr", g:"P2", ax:2, role:"Chercheur en sciences islamiques", talk:"De la rihla à la diplomatie spirituelle : le voyage comme architecture de la Fayda chez Cheikh Ibrāhīm Niasse"},
- {id:"afz", n:"Aradi Fatima-Zahra", g:"P2", ax:2, role:"", talk:"Écrire pour transmettre : Sayyida Rokhaya Niass et la construction d'une autorité intellectuelle féminine dans la tradition soufie"},
- {id:"ihh", n:"Cheikh Ibrahim Hachim Al Hachimi", g:"P2", ax:2, role:"Mufti général de la Fayda Tidjaniyya du sud-ouest du Nigéria ; membre du Conseil supérieur de la Fondation Mohammed VI des oulémas africains", talk:"Le rôle des gens de la Fayda Tidjaniyya dans l'application et le renforcement de la culture de la paix dans le monde : le Nigéria comme modèle"},
- {id:"pko", n:"S.A. le Dr Prince Khalid Ola Bisi Oyeniyi", g:"P2", ax:3, role:"Émir de la province de Zaki, État d'Oyo, Nigéria", talk:"Le rôle des princes dans la traduction de la culture de la paix dans la vie réelle : le Nigéria comme modèle"}
+ {id:"bn", d:"sam", n:"Oustaz Babacar Niang", g:"OUV", ax:null, role:"", talk:"Leçon inaugurale : leçon scientifique et spirituelle"},
+ {id:"aby", d:"sam", n:"Atiq Abou Bakr Yaghwal", g:"NA", ax:null, role:"", talk:null},
+ {id:"ab", d:"sam", n:"Dr Abdelmoughith Bassir", g:"P1", ax:3, role:"Président du Conseil scientifique local de la province de Berrechid, membre de la Fondation Mohammed Bassir pour les recherches, études et médias", talk:"Le devoir des gens du soufisme au Maroc et au Sénégal dans le raffermissement des liens entre les deux pays"},
+ {id:"mib", d:"sam", n:"Seydi Moukhtar Ibrahim Bauchi", g:"P2", ax:2, role:"", talk:"Les relations diplomatiques entre Cheikh Ibrahima Niasse et le Nigéria"},
+ {id:"mmc", d:"sam", n:"Cheikh Moustapha Mouhamad Cissé", g:"P1", ax:3, role:"", talk:"Cheikh Ibrahim et les relations maroco-sénégalaises : de l'unité de la référence spirituelle aux horizons de la diplomatie civilisationnelle"},
+ {id:"mmd", d:"dim", n:"Dr Mouhamed Mbacké Diouf", g:"P2", ax:1, role:"Membre de la Fondation Mohammed VI des oulémas africains, bureau de Dakar", talk:"Le rôle de la voie mouride dans le renforcement des relations entre le Royaume chérifien et le Sénégal"},
+ {id:"pko", d:"dim", n:"Son Altesse le Dr Prince Khalid Ola Bisi Oyeniyi", g:"P2", ax:3, role:"Émir de la province de Zaki, État d'Oyo, Nigéria", talk:"Le rôle des princes dans la traduction de la culture de la paix dans la vie réelle : le Nigéria comme modèle"},
+ {id:"ihh", d:"dim", n:"Cheikh Ibrahim Hachim Al Hachimi", g:"P2", ax:2, role:"Mufti général de la Fayda Tidjaniyya du sud-ouest du Nigéria (États d'Edo et Delta), mufti de Zaki, président du conseil de la Fondation Al Hayat International et du Collège At-Taqwa, membre du Conseil supérieur de la Fondation Mohammed VI des oulémas africains et de la haute instance des grands oulémas de Zaki", talk:"Le rôle des gens de la Fayda Tidjaniyya dans l'application et le renforcement de la culture de la paix dans le monde : le Nigéria comme modèle"},
+ {id:"inn", d:"dim", n:"Cheikh Ibrahima Nassiroud-dine Niass", g:"P1", ax:2, role:"Secrétaire général de l'Union islamique africaine", talk:null},
+ {id:"bba", d:"dim", n:"Oustaz Babacar Ba at-Tidjani", g:"P1", ax:4, role:"", talk:"La relation du savant El Hadj Ibn Abbas Sall at-Tidjani (que Dieu l'agrée) avec le Royaume du Maroc"},
+ {id:"od", d:"dim", n:"Ousmane Diaw", g:"P1", ax:5, role:"", talk:"Les échanges intellectuels entre les savants du Maghreb et ceux de la région sénégambienne à travers les réponses du marocain El-Hadji Abdul Karim Bennis aux questions du sénégambien El-Hadji Abdulaye Niass"},
+ {id:"ikn", d:"dim", n:"Cheikh Ibrahim Khouraychi Niass", g:"P1", ax:3, role:"", talk:"Diplomatie spirituelle et relations bilatérales : le rôle des États et des chefs religieux dans le renforcement du rapprochement entre le Maroc et le Sénégal (Cheikh Ibrahim Niass et sa famille comme modèle)"},
+ {id:"mhc", d:"dim", n:"Cheikh Mounir Hassan Cissé", g:"P2", ax:1, role:"Directeur de l'Institut islamique afro-américain d'études à distance (AAII Online Courses), chercheur en master en croyance et philosophie, Université Al-Azhar, Le Caire, Égypte", talk:"Mobilisation du soft power spirituel dans la prévention des conflits et la promotion de la paix"},
+ {id:"fsn", d:"dim", n:"Seyyida Fatiha Salim Niang", g:"P2", ax:2, role:"Diplômée en diplomatie de l'Université Al Akhawayn d'Ifrane", talk:"Les quatre points de l'axe : impact mondial, rayonnement de la Tijaniyya, production scientifique, rôle pionnier dans la diplomatie culturelle et spirituelle", plain:1},
+ {id:"nen", d:"dim", n:"Cheikh Nour Eddine Mohamed Al Amine Ibrahim Niass", g:"P1", ax:4, role:"Chercheur en études islamiques", talk:"Quand le savoir devient un pont entre les nations : Oustaz Mahmoud Diop et le parcours du rapprochement maroco-sénégalais"},
+ {id:"pss", d:"dim", n:"Cheikh Pape Samba Sarr", g:"P2", ax:2, role:"Ingénieur en génie électrique, spécialisé en télécommunications filaires et sans fil ; titulaire également d'une certification en test logiciel", talk:"Impact mondial de Cheikh Ibrahim Niass et son rôle pionnier dans la diplomatie culturelle et spirituelle", plain:1},
+ {id:"afz", d:"dim", n:"Aradi Fatima-Zahra", g:"P2", ax:2, role:"Professeure de français au cycle secondaire qualifiant et doctorante en « Littérature, Langue et Culture » à la Faculté des lettres et des sciences humaines de Béni Mellal, Université Sultan Moulay Slimane, au sein du laboratoire LARLLARC", talk:"Écrire pour transmettre : Sayyida Rokhaya Niass et la construction d'une autorité intellectuelle féminine dans la tradition soufie"},
+ {id:"nmd", d:"dim", n:"Seyda Ndeye Maguette Diallo", g:"P2", ax:2, role:"Analyste en technologie de l'information, systèmes digitaux et bases de données", talk:["L'école de Cheikh Ibrahima Niasse et la diplomatie spirituelle","L'empreinte des femmes (héritières du Cheikh) dans le dialogue des nations africaines par la transmission des valeurs islamiques : le modèle de Seyda Rokhaya Niasse"]},
+ {id:"ibc", d:"dim", n:"Cheikh Ibrahim Bachir Cissé", g:"P2", ax:1, role:"", talk:"L'éducation spirituelle et la paix intérieure sont la pierre angulaire de la construction de la paix mondiale"},
+ {id:"ctk", d:"dim", n:"Imam Cheikh Tidiane Konté", g:"P2", ax:2, role:"", talk:"Le rayonnement ibrahimien en Mauritanie : manifestations du lien spirituel et scientifique et preuves historiques"},
+ {id:"as", d:"dim", n:"Seydi Alioune Seck", g:"P2", ax:1, role:"Enseignant d'arabe", talk:"L'éducation spirituelle chez Cheikh Ibrahim Niass et son impact sur l'ancrage des valeurs de paix et de fraternité humaine"},
+ {id:"ns", d:"dim", n:"Imam Ndaga Sarr", g:"P2", ax:2, role:"Chercheur en sciences islamiques", talk:"De la rihla à la diplomatie spirituelle : le voyage comme architecture de la Fayda chez Cheikh Ibrāhīm Niasse"}
 ];
+const talks = s => s.talk ? [].concat(s.talk) : [];
 
 const AXES = {
  P1:[
@@ -1010,7 +1023,7 @@ const AXES = {
    p:{fr:"Rôle des foyers spirituels dans la construction de ponts ; expansion de la Tijaniyya ; mémoire spirituelle commune (Cheikh Omar Al Foutiyou, El Hadj Abdoulaye Niass, El Hadj Malick Sy et leurs familles).",en:"Role of spiritual centres in building bridges; spread of the Tijaniyya; shared spiritual memory (Cheikh Omar Al Foutiyou, El Hadj Abdoulaye Niass, El Hadj Malick Sy and their families).",ar:"دور البيوتات الروحية في بناء الجسور، انتشار الطريقة التجانية، والذاكرة الروحية المشتركة (الشيخ عمر الفوتي، الحاج عبد الله انياس، الحاج مالك سي وأسرهم)."}},
   {n:2,t:{fr:"Cheikh Ibrahim Niass et le Maroc",en:"Cheikh Ibrahim Niass and Morocco",ar:"الشيخ إبراهيم انياس والمغرب"},
    p:{fr:"Ses liens avec le Maroc, ses contributions aux Dourouss Hassaniya et son rayonnement dans le monde islamique.",en:"His ties with Morocco, his contributions to the Hassaniya Lectures and his influence across the Islamic world.",ar:"صلاته بالمغرب، ومساهماته في الدروس الحسنية، وإشعاعه في العالم الإسلامي."}},
-  {n:3,t:{fr:"Relations bilatérales et dimension territoriale",en:"Bilateral relations and the territorial dimension",ar:"العلاقات الثنائية والبعد الترابي"},
+  {n:3,t:{fr:"Relations bilatérales Maroc-Sénégal",en:"Morocco–Senegal bilateral relations",ar:"العلاقات الثنائية المغربية السنغالية"},
    p:{fr:"Histoire des liens et de leurs cadres institutionnels ; coopération politique, culturelle et économique ; rôle stratégique des États ; jumelages et coopération décentralisée entre villes et collectivités.",en:"Institutional frameworks; political, cultural and economic cooperation; twinning and decentralised cooperation between cities.",ar:"الأطر المؤسساتية، التعاون السياسي والثقافي والاقتصادي، التوأمة والتعاون اللامركزي بين المدن والجماعات."}},
   {n:4,t:{fr:"Foyers spirituels et scientifiques du Sénégal",en:"Spiritual and scholarly centres of Senegal",ar:"البيوتات الروحية والعلمية في السنغال"},
    p:{fr:"Interactions historiques et contemporaines avec le Maroc ; contributions d'Oustaz Barham Diop, Serigne Mawdo Sy Abdou, Serigne Mamoune Mbacké, Serigne Abdoul Aziz Sy Al Amine, Serigne Mansour Sy Abdou, Cheikh Tidiane Diallo, Dr Rawane Mbaye et Dr Ousmane Kane ; transmission des savoirs ; mention spéciale : Serigne Abbas Sall de Louga.",en:"Historic and contemporary interactions with Morocco; contributions of Oustaz Barham Diop, Serigne Mawdo Sy Abdou, Serigne Mamoune Mbacké, Serigne Abdoul Aziz Sy Al Amine, Serigne Mansour Sy Abdou, Cheikh Tidiane Diallo, Dr Rawane Mbaye and Dr Ousmane Kane; transmission of knowledge; special mention: Serigne Abbas Sall of Louga.",ar:"التفاعل مع المغرب، نقل المعارف، إسهام الأستاذ إبراهيم محمود ديوب (برهام)، وتسليط الضوء على سرين عباس صال من لوغا."}},
@@ -1018,7 +1031,7 @@ const AXES = {
    p:{fr:"Parcours des étudiants et savants formés au Maroc et au Sénégal ; rôle des institutions éducatives.",en:"Students and scholars trained in Morocco and Senegal; the role of educational institutions.",ar:"مسارات الطلبة والعلماء الذين تكوّنوا في المغرب والسنغال، ودور المؤسسات التعليمية."}}
  ],
  P2:[
-  {n:1,t:{fr:"Figures du soufisme et zawiyas sénégalaises dans la diplomatie religieuse",en:"Sufi figures and Senegalese zawiyas in religious diplomacy",ar:"أعلام التصوف والزوايا السنغالية في الدبلوماسية الدينية"},
+  {n:1,t:{fr:"Rôle des figures du soufisme et des zawiyas sénégalaises et marocaines dans la diplomatie religieuse internationale",en:"Role of Sufi figures and Senegalese and Moroccan zawiyas in international religious diplomacy",ar:"دور أعلام التصوف والزوايا السنغالية والمغربية في الدبلوماسية الدينية الدولية"},
    p:{fr:"Réconciliation, soft power spirituel et prévention des conflits ; sauvegarde du patrimoine immatériel ; voix de l'Afrique dans les instances internationales.",en:"Reconciliation, spiritual soft power and conflict prevention; safeguarding intangible heritage; Africa's voice in international bodies.",ar:"المصالحة، القوة الناعمة الروحية والوقاية من النزاعات، صون التراث اللامادي، وحضور إفريقيا في الهيئات الدولية."}},
   {n:2,t:{fr:"Focus international sur Cheikh Ibrahim Niass",en:"International focus on Cheikh Ibrahim Niass",ar:"الشيخ إبراهيم انياس في بعده العالمي"},
    p:{fr:"Impact mondial, rayonnement de la Tijaniyya, production intellectuelle et rôle pionnier dans la diplomatie culturelle et spirituelle.",en:"Global impact, reach of the Tijaniyya, intellectual output and pioneering role in cultural and spiritual diplomacy.",ar:"الأثر العالمي، إشعاع الطريقة التجانية، الإنتاج العلمي والدور الريادي في الدبلوماسية الثقافية والروحية."}},
@@ -1133,7 +1146,7 @@ function axisHTML(group){
     return `<details class="axis">
       <summary><span class="num">${axLabel}</span><span class="ttl">${esc(L(a.t))}</span><svg class="chev"><use href="#i-chev"/></svg></summary>
       <div class="axis-body"><p class="points">${esc(L(a.p))}</p>
-        ${sp.length?`<div class="spk-mini">${sp.map(s=>`<div><span class="mono">${esc(initials(s.n))}</span><span><b>${esc(s.n)}</b>${s.talk?`<span lang="fr" dir="ltr">« ${esc(s.talk)} »</span>`:""}</span></div>`).join("")}</div>`:""}
+        ${sp.length?`<div class="spk-mini">${sp.map(s=>`<div><span class="mono">${esc(initials(s.n))}</span><span><b>${esc(s.n)}</b>${talks(s).map(x=>`<span lang="fr" dir="ltr">${s.plain?esc(x):"« "+esc(x)+" »"}</span>`).join("")}</span></div>`).join("")}</div>`:""}
       </div></details>`;}).join("")}</div>`;
 }
 function renderDay(){
@@ -1164,19 +1177,21 @@ function renderDay(){
     </div>`;
 }
 function renderFilters(){
-  const opts=[["ALL","all"],["OUV","opening"],["P1","panel1"],["P2","panel2"]];
+  const opts=[["ALL","all"],["sam","daySat"],["dim","daySun"]];
   $("#filters").innerHTML = opts.map(([v,k])=>`<button type="button" class="chip" data-f="${v}" aria-pressed="${filter===v}">${esc(t(k))}</button>`).join("");
 }
 function renderSpeakers(){
-  const tagFor = s => s.g==="OUV" ? t("opening") : `${s.g==="P1"?t("panel1"):t("panel2")} · ${lang==="ar"?"المحور "+s.ax:(lang==="en"?"Theme "+s.ax:"Axe "+s.ax)}`;
-  $("#speakers").innerHTML = SPK.filter(s=>filter==="ALL"||s.g===filter).map(s=>`
+  const axT = s => { const a=(AXES[s.g]||[]).find(x=>x.n===s.ax); return a?L(a.t):""; };
+  const tagFor = s => s.g==="OUV" ? t("opening") : s.g==="NA" ? t("axisNA") : `${lang==="ar"?"الجلسة "+(s.g==="P1"?1:2):(s.g==="P1"?"Panel 1":"Panel 2")} · ${lang==="ar"?"المحور "+s.ax:(lang==="en"?"Theme "+s.ax:"Axe "+s.ax)}`;
+  $("#speakers").innerHTML = SPK.filter(s=>filter==="ALL"||s.d===filter).map(s=>`
     <article class="spk">
       <span class="seal" aria-hidden="true">${esc(initials(s.n))}</span>
       <div>
         <span class="tag">${esc(tagFor(s))}</span>
-        <h3 dir="ltr" style="text-align:start">${esc(s.n)}</h3>
+        ${axT(s)?`<p class="axt">${esc(axT(s))}</p>`:""}
+        <h3><bdi>${esc(s.n)}</bdi></h3>
         ${s.role?`<p class="role" lang="fr" dir="ltr">${esc(s.role)}</p>`:""}
-        ${s.talk?`<p class="talk" lang="fr" dir="ltr">${esc(s.talk)}</p>`:""}
+        ${talks(s).map(x=>`<p class="talk${s.plain?" plain":""}" lang="fr" dir="ltr">${esc(x)}</p>`).join("")}
       </div>
     </article>`).join("");
 }

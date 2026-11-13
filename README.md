@@ -55,3 +55,11 @@ python3 -m http.server 8765 --bind 127.0.0.1
 ## Version 9 (11 novembre 2026)
 
 - Album photo actualisé : 223 photos (2 nouvelles photos, n° 222 et 223).
+
+## Version 10 (14 novembre 2026)
+
+- Intervenants mis à jour d'après « Intervenants et thèmes retenus » : 22 intervenants
+  (nouveaux : Atiq Abou Bakr Yaghwal, Seydi Moukhtar Ibrahim Bauchi, Cheikh Moustapha Mouhamad Cissé,
+  Oustaz Babacar Ba at-Tidjani, Seyda Ndeye Maguette Diallo, Cheikh Ibrahim Bachir Cissé,
+  Imam Cheikh Tidiane Konté), axes et fonctions corrigés, filtres par journée.
+- Document « Intervenants et thèmes » téléchargeable dans `docs/`.
