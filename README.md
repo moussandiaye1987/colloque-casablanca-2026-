@@ -63,3 +63,8 @@ python3 -m http.server 8765 --bind 127.0.0.1
   Oustaz Babacar Ba at-Tidjani, Seyda Ndeye Maguette Diallo, Cheikh Ibrahim Bachir Cissé,
   Imam Cheikh Tidiane Konté), axes et fonctions corrigés, filtres par journée.
 - Document « Intervenants et thèmes » téléchargeable dans `docs/`.
+
+## Version 11 (18 novembre 2026)
+
+- Vidéos : 8 interventions du dimanche 8 et 5 interviews ajoutées (30 vidéos au total).
+- Nouvelle section « Revue de presse » : 7 articles (Seneweb, Sunuker, Xibar360, APS, AllAfrica, SeneNews, Marsad).
